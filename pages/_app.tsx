@@ -1,5 +1,6 @@
 import {Inter} from 'next/font/google';
 import type { AppProps } from 'next/dist/shared/lib/router/router';
+import '../styles/globals.css';
 const inter = Inter({subsets: ['latin']});
 import Head from 'next/head';
 
