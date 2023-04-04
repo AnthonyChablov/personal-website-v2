@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import Link from "next/link";
 import IconButton from "@mui/material/IconButton";
 import Button from "@mui/material/Button";
@@ -5,9 +6,29 @@ import Image from "next/image";
 import logo from '../../assets/images/navbar-logo.png';
 import NavLink from "./NavLink";
 
+
+
 const NavBar = () => {
+
+  /* Setting Mobile Nav */
+
+  /* Setting Nav Color onScrollDown*/
+  const [ color, setColor ] = useState(false);
+
+  function changeColor(){
+    if (window.scrollY >= 90){
+      setColor(true);
+    }else{
+      setColor(false);
+    }
+  }
+
+  window.addEventListener('scroll', changeColor);
+
   return (
-    <nav className="flex justify-between items-center">
+    <nav className={`h-fit px-20 py-4 mx-auto flex justify-between items-center sticky top-0 z-50 
+      ${color && 'backdrop-blur bg-zinc-100/75 shadow-xl'}`}
+    >
       <Link href="/">
         <IconButton>
           <Image 

@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className="h-fit text-center mb-44">
         <div className="flex justify-center">
-            <div className="rounded-full overflow-hidden w-fit flex mt-40">
+            <div className="rounded-full overflow-hidden w-fit flex mt-32">
                 <Image 
                     src={profileImg} 
                     height={100}

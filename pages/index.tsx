@@ -19,8 +19,8 @@ export default function Home() {
         <title key={'title'}>Anthony Chablov</title>
       </Head>
       <div className="bg-zinc-100 ">
+        <NavBar/>
         <div className="h-fit px-20 py-10 mx-auto">
-          <NavBar/>
           <Hero/>
           <AboutMe/>
           <Projects/>
