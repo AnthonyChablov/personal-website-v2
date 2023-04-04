@@ -16,7 +16,7 @@ const Hero = () => {
             </div>
         </div>
         <p className="mt-16 uppercase font-light text-slate-700">Anthony Chablov</p>
-        <h1 className="mt-10 text-5xl text-slate-900">Frontend Web Developer</h1>
+        <h1 className="mt-10 text-5xl text-slate-800 font-medium">Frontend Web Developer</h1>
         <p className="mt-10 font-light text-slate-700">
           I have a passion for software. I enjoy creating tools that make life easier for people.
         </p>

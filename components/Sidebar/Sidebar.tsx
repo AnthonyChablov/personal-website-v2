@@ -1,9 +1,9 @@
 import IconButton from "@mui/material/IconButton";
-import Icons from "../Icons/Icons";
+import Icons from "../Common/Icons";
 import VerticalDivider from "../Common/VerticalDivider";
 import Button from "@mui/material/Button";
 
-const iconSize = 40
+const iconSize = 40 
 
 interface ISideBar {
     anchor : string,
@@ -14,7 +14,7 @@ const Sidebar = ({anchor, mode}:ISideBar) => {
   return (
     <div className={`fixed bottom-0 h-fit 
         ${(anchor === 'left') && 'left-20'} 
-        ${(anchor === 'right') && 'right-9'}`
+        ${(anchor === 'right') && 'right-0'}`
     }>
         <div className="flex flex-col items-center justify-center">
             {
@@ -32,12 +32,12 @@ const Sidebar = ({anchor, mode}:ISideBar) => {
                             }
                         </>
                     ) : (
-                        <div className="rotate-90 mb-20 ">
+                        <div className="rotate-90 mb-24">
                             <Button 
-                                className="text-md lowercase text-zinc-800 "
+                                className="text-lg lowercase text-zinc-800 font-thin"
                                 variant='text'
                             >
-                                <a href="mailto: abc@example.com">
+                                <a href="mailto: abc@example.com  ">
                                     aechablov@gmail.com
                                 </a>
                             </Button>
