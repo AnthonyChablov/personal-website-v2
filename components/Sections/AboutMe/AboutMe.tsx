@@ -2,12 +2,12 @@ import Header from '../../Common/Header';
 
 const AboutMe = () => {
   return (
-    <section className="text-center tracking-wide mb-10 position" id='about'>
+    <section className="text-center tracking-wide mb-10 position pt-14" id='about'>
         <div className=" left-0">
-            <div className="flex items-center justify-center ">
+            <div className="flex items-center ">
                 <Header title={'01. About Me'}/>
             </div>
-            <p className=' w-5/12 text-left mx-auto text-md font-light '>
+            <p className=' w-10/12 text-left mx-auto text-md font-light '>
                 Welcome to my personal portfolio! 
                 <br></br><br></br>
                 My name is Anthony, and I am a front-end web developer with a passion for 

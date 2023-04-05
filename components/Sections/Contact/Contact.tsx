@@ -5,7 +5,7 @@ import SectionLayout from '../SectionLayout';
 
 const Contact = () => {
   return (
-    <section className="text-center tracking-wide" id='contact'>
+    <section className="text-center tracking-wide pt-14" id='contact'>
         <Divider className="w-4/12 mx-auto bg-zinc-300 mt-24 mb-24"/>
         <p className="text-lg text-zinc-600">04. What's Next?</p>
         <h4 className="text-5xl font-semibold text-zinc-800 my-5 ">Get In Touch</h4>

@@ -3,7 +3,7 @@ import Icons from "../Common/Icons";
 import VerticalDivider from "../Common/VerticalDivider";
 import Button from "@mui/material/Button";
 
-const iconSize = 40 
+const iconSize = 25 
 
 interface ISideBar {
     anchor : string,
@@ -32,9 +32,9 @@ const Sidebar = ({anchor, mode}:ISideBar) => {
                             }
                         </>
                     ) : (
-                        <div className="rotate-90 mb-24">
+                        <div className="rotate-90 mb-20">
                             <Button 
-                                className="text-lg lowercase text-zinc-800 font-thin"
+                                className="text-sm lowercase text-zinc-700"
                                 variant='text'
                             >
                                 <a href="mailto: abc@example.com  ">

@@ -2,6 +2,7 @@ import {AiFillHtml5, AiFillGithub, AiFillLinkedin, AiFillTwitterSquare} from 're
 import {DiCss3, DiSass, DiReact, DiNodejs, DiNpm, DiPython} from 'react-icons/di';
 import {HiDatabase} from "react-icons/hi";
 import {SiTypescript, SiJavascript, SiTailwindcss, SiFirebase} from 'react-icons/si';
+import {TbExternalLink} from 'react-icons/tb';
 
 interface IIcons {
     type : string,
@@ -12,6 +13,7 @@ const Icons = ({type, size}:IIcons) => {
   return (
     <div className='text-slate-700'>{
         {
+            link : <TbExternalLink size={size}/>,
             twitter : <AiFillTwitterSquare size={size}/>,
             linkedin: <AiFillLinkedin size={size}/>,
             github: <AiFillGithub size={size}/>,

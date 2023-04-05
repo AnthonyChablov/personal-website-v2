@@ -2,7 +2,7 @@ import Divider from '@mui/material/Divider';
 
 const Education = () => {
   return (
-    <section className="text-center tracking-wide mb-10 " id='education'>
+    <section className="text-center tracking-wide mb-10 pt-14" id='education'>
         <div className="flex items-center justify-center">
             <h1 className='text-xl text-zinc-700 font-semibold'><span>03.</span> Education</h1>
             <Divider className="w-4/12 ml-5 bg-zinc-300 mt-24 mb-24"/>

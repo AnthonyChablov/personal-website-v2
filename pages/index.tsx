@@ -10,8 +10,11 @@ import Footer from "../components/Footer/Footer";
 import AboutMe from "../components/Sections/AboutMe/AboutMe";
 import Education from "../components/Sections/Education/Education";
 import Projects from "../components/Sections/Projects/Projects";
+import useWindowSize from "../hooks/useWindowDimensions";
 
 export default function Home() {
+
+  const windowWidth = (typeof window !== 'undefined') ? useWindowSize().width : 0;
 
   return (
     <>
@@ -29,8 +32,15 @@ export default function Home() {
           <Footer/>
         </div>
       </div>
-      <Sidebar anchor={'left'} mode={'icons'}/>
-      <Sidebar anchor={'right'} mode={'email'}/>
+      {
+        windowWidth >= 1250 && (
+          <>
+            <Sidebar anchor={'left'} mode={'icons'}/>
+            <Sidebar anchor={'right'} mode={'email'}/>
+          </>
+        )
+      }
+      
     </>
   );
 }

@@ -8,7 +8,7 @@ interface INavLink {
 
 const NavLink = ({text, linkTo}:INavLink) => {
   return (
-    <li className='text-sm text-slate-700 font-normal hover:underline'>
+    <li className=' text-sm text-slate-700 font-normal hover:underline'>
         <Link href={linkTo} scroll={false}>
             {text}
         </Link>

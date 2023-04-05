@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import Link from "next/link";
 import IconButton from "@mui/material/IconButton";
 import Button from "@mui/material/Button";
@@ -18,16 +18,19 @@ const NavBar = () => {
   function changeColor(){
     if (window.scrollY >= 90){
       setColor(true);
-    }else{
+    } else {
       setColor(false);
     }
   }
 
-  window.addEventListener('scroll', changeColor);
+  useEffect(()=>{
+    window.addEventListener('scroll', changeColor);
+  },[]);
+  
 
   return (
-    <nav className={`h-fit px-20 py-4 mx-auto flex justify-between items-center sticky top-0 z-50 
-      ${color && 'backdrop-blur bg-zinc-100/75 shadow-xl'}`}
+    <nav className={`h-fit px-20 py-3 mx-auto flex justify-between 
+      items-center sticky top-0 z-50 ${color && 'backdrop-blur bg-zinc-100/90 shadow-xl'}`}
     >
       <Link href="/">
         <IconButton>
