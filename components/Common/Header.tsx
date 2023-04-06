@@ -7,10 +7,10 @@ interface IHeader{
 
 const Header = ({title} : IHeader) => {
   return (
-    <>
-        <h1 className='text-xl text-zinc-700 font-semibold'>{title}</h1>
-        <Divider className=" w-4/6 ml-5 bg-zinc-300 mt-24 mb-24"/>
-    </>
+    <div className='w-full pt-16'>
+        <h1 className='text-2xl text-left text-zinc-700 font-semibold mb-5'>{title}</h1>
+        <Divider className=" bg-zinc-300 mb-12" />
+    </div>
   )
 }
 

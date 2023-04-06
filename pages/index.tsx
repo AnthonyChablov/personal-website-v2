@@ -21,9 +21,9 @@ export default function Home() {
       <Head>
         <title key={'title'}>Anthony Chablov</title>
       </Head>
-      <div className="bg-zinc-100 ">
+      <div className="bg-zinc-100">
         <NavBar/>
-        <div className="h-fit px-20 py-10 mx-auto">
+        <div className="h-fit px-10 py-8 mx-auto">
           <Hero/>
           <AboutMe/>
           <Projects/>

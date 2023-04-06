@@ -5,27 +5,35 @@ import Link from 'next/link';
 
 interface IProjectCard {
   subheader : string, 
+  id: number,
   header : string,
   paragraph: string, 
-  madewith: string
+  madewith: string,
+  github: string,
+  link: string
 }
 
-const ProjectCard = ({subheader, header, paragraph, madewith} : IProjectCard) => {
+const ProjectCard = ({subheader, id, header, paragraph, madewith, github, link} : IProjectCard) => {
   return (
-    <div className='flex'>
-      <Button className="w-10/12 p-10 bg-slate-200 hover:bg-slate-300 mx-auto h-fit"
+    <div className='flex '>
+      <Button 
+        className="w-full p-8 bg-slate-200 hover:bg-slate-300 mx-auto h-fit"
         variant='outlined'
       >
-        <div className='w-full text-left'>
-          <p className='text-slate-700 text-md capitalize'>{subheader}</p>
-          <h1 className='text-slate-700 text-3xl capitalize'>{header}</h1>
-          <p className='text-slate-700 text-md normal-case mt-7'>{paragraph}</p>
-          <p className='text-slate-700 text-md capitalize mt-7 mb-5'>{madewith}</p>
-          <div className=" flex space-x-4">
-            <Link href="https://en.wikipedia.org/wiki/Next.js">
+        <div className={`w-full text-slate-700 text-md capitalize 
+          ${id % 2 === 0 ? 'text-left' : 'text-right'} `}
+        >
+          <p >{subheader}</p>
+          <h1 className='text-3xl  pt-3'>{header}</h1>
+          <p className='normal-case mt-7 font-regular'>{paragraph}</p>
+          <p className='mt-7 mb-5'>{madewith}</p>
+          <div className={`pt-3 pb-3 flex space-x-5 
+            ${id % 2 === 1 && 'justify-end'}`
+          }>
+            <Link href={github} target="_blank">
               <Icons type={'github'} size={30}/>
             </Link>
-            <Link href="https://en.wikipedia.org/wiki/Next.js">
+            <Link href={link} target="_blank">
               <Icons type={'link'} size={30}/>
             </Link>
           </div>
