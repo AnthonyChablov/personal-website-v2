@@ -23,7 +23,7 @@ const SideDrawer = () => {
             '& .MuiDrawer-paper': {
                 width: drawerWidth,
                 backgroundColor:'#f4f4f5',
-            }
+            },
         }}
         variant="persistent"
         anchor={ 'right'}

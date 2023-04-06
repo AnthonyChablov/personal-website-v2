@@ -33,8 +33,9 @@ const NavBar = () => {
   
   return (
     <>
-      <nav className={` px-4 py-3 mx-auto flex justify-between 
-        items-center lg:items-baseline sticky top-0 z-50 ${color && 'backdrop-blur bg-zinc-100/90 shadow-xl'}`}
+      <nav className={` px-4 py-3 lg:px-20 mx-auto flex justify-between 
+        items-center lg:items-baseline sticky top-0 z-50 
+        ${color && 'backdrop-blur bg-zinc-100/90 shadow-2xl '}`}
       >
         <Link href="/">
           <IconButton>

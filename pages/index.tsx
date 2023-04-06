@@ -23,7 +23,7 @@ export default function Home() {
       </Head>
       <div className="bg-zinc-100">
         <NavBar/>
-        <div className="h-fit px-10 py-8 mx-auto">
+        <div className="h-fit px-10 py-8 mx-auto max-w-5xl">
           <Hero/>
           <AboutMe/>
           <Projects/>

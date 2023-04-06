@@ -43,4 +43,4 @@ const ProjectCard = ({subheader, id, header, paragraph, madewith, github, link} 
   )
 }
 
-export default ProjectCard
+export default ProjectCard;

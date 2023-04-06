@@ -24,6 +24,7 @@ const AboutMe = () => {
                 In my free time, I enjoy exploring new design concepts and experimenting with code to push the boundaries 
                 of what's possible on the web. I am also a strong believer in collaboration, and I enjoy working with other 
                 talented individuals to bring ideas to life.
+                <br></br><br></br>
                 Thank you for taking the time to learn a bit about me, and I look forward to working with 
                 you to create something truly amazing.
             </p>
