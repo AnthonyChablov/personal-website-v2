@@ -18,6 +18,10 @@ const NavBar = () => {
   /* Setting Nav Color onScrollDown*/
   const [ color, setColor ] = useState(false);
   
+  /* Setting Nav Bar disappear onScrollDown */
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  
   /* Setting Window Width */
   const windowWidth = (typeof window !== 'undefined') ? useWindowSize().width : 0;
 
@@ -28,14 +32,46 @@ const NavBar = () => {
   }
 
   useEffect(()=>{
-    window.addEventListener('scroll', changeColor);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', changeColor);
+
+      if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+        setShow(false); 
+      } else { // if scroll up show the navbar
+        setShow(true);  
+      }
+
+      // remember current page location to use in the next move
+      setLastScrollY(window.scrollY); 
+    }
   },[]);
+
+  
+
+  const controlNavbar = () => {
+    if (typeof window !== 'undefined') { 
+      
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
+
+      // cleanup function
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
   
   return (
     <>
       <nav className={` px-4 py-3 lg:px-20 mx-auto flex justify-between 
         items-center lg:items-baseline sticky top-0 z-50 
+        ${!show && 'hidden'}
         ${color && 'backdrop-blur bg-zinc-100/90 shadow-2xl '}`}
+        
       >
         <Link href="/">
           <IconButton>

@@ -1,7 +1,7 @@
 import {AiFillHtml5, AiFillGithub, AiFillLinkedin, AiFillTwitterSquare, AiOutlineClose, AiOutlineMenu} from 'react-icons/ai';
-import {DiCss3, DiSass, DiReact, DiNodejs, DiNpm, DiPython} from 'react-icons/di';
+import {DiCss3, DiSass, DiReact, DiNodejs, DiNpm, DiPython, DiMongodb} from 'react-icons/di';
 import {HiDatabase} from "react-icons/hi";
-import {SiTypescript, SiJavascript, SiTailwindcss, SiFirebase} from 'react-icons/si';
+import {SiTypescript, SiJavascript, SiTailwindcss, SiFirebase, SiNextdotjs} from 'react-icons/si';
 import {TbExternalLink} from 'react-icons/tb';
 
 interface IIcons {
@@ -13,6 +13,8 @@ const Icons = ({type, size}:IIcons) => {
   return (
     <div className='text-slate-700'>{
         {
+          mongoDB: <DiMongodb size={size}/>,
+          next: <SiNextdotjs size={size}/>,
           menu: <AiOutlineMenu size={size}/>,
           close: <AiOutlineClose size={size}/>,
           link : <TbExternalLink size={size}/>,
@@ -23,7 +25,7 @@ const Icons = ({type, size}:IIcons) => {
           css: <DiCss3 size={size}/>,
           scss:<DiSass size={size}/>,
           react: <DiReact size={size}/>,
-          nodeJS:<DiNodejs size={size}/>,
+          node:<DiNodejs size={size}/>,
           npm: <DiNpm size={size}/>,
           python: <DiPython size={size}/>,
           database: <HiDatabase size={size}/>,

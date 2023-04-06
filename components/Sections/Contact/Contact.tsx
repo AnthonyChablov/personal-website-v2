@@ -17,7 +17,7 @@ const Contact = () => {
             capitalize  hover:bg-slate-100 hover:text-slate-700 text-md
             rounded-md shadow-md'
         >
-            <p>Say Hello</p>
+          <p>Say Hello</p>
         </Button>
     </section>
   )

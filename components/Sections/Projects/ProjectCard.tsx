@@ -17,14 +17,14 @@ const ProjectCard = ({subheader, id, header, paragraph, madewith, github, link} 
   return (
     <div className='flex '>
       <Button 
-        className="w-full p-8 bg-slate-200 hover:bg-slate-300 mx-auto h-fit"
+        className="w-full p-6 bg-slate-200 hover:bg-slate-300 mx-auto h-fit shadow-md"
         variant='outlined'
       >
         <div className={`w-full text-slate-700 text-md capitalize 
           ${id % 2 === 0 ? 'text-left' : 'text-right'} `}
         >
           <p >{subheader}</p>
-          <h1 className='text-3xl  pt-3'>{header}</h1>
+          <h1 className='text-3xl pt-3'>{header}</h1>
           <p className='normal-case mt-7 font-regular'>{paragraph}</p>
           <p className='mt-7 mb-5'>{madewith}</p>
           <div className={`pt-3 pb-3 flex space-x-5 
