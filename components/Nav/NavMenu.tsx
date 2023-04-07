@@ -3,6 +3,13 @@ import Link from "next/link";
 import Button from "@mui/material/Button";
 import { useStateStore } from "../../store/useStore";
 
+const navigationLinks= [
+  {text: '01. About Me', linkTo: '#about'}, 
+  {text:'02. My Projects', linkTo: '#projects'}, 
+  {text: '03. Education', linkTo : '#education'}, 
+  {text : '04. Contact', linkTo: '#contact'}
+]
+
 const NavMenu = () => {
 
   const toggleSideBar = useStateStore(state => state.toggleSideBar);
@@ -18,12 +25,7 @@ const NavMenu = () => {
         lg:space-y-0 lg:space-x-9 lg:flex-row lg:items-center pt-40 lg:pt-0`
       }>
         {
-          [
-            {text: '01. About Me', linkTo: '#about'}, 
-            {text:'02. My Projects', linkTo: '#projects'}, 
-            {text: '03. Education', linkTo : '#education'}, 
-            {text : '04. Contact', linkTo: '#contact'}
-          ].map((link, i)=>{
+          navigationLinks.map((link, i)=>{
             return (
               <NavLink 
                 key={i} 

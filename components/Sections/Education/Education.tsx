@@ -1,6 +1,7 @@
 import Divider from '@mui/material/Divider';
 import Header from '../../Common/Header';
-import DisplayCard from './DisplayCard/DisplayCard';
+import SingleCard from './DisplayCards/SingleCard';
+import WideCard from './DisplayCards/WideCard';
 
 const Education = () => {
 
@@ -24,13 +25,22 @@ const Education = () => {
       <div className="flex items-center justify-center">
         <Header title='03. Skills & Education' />
       </div>
+        <p className='text-md font-light text-left text-slate-800 mb-10'>
+          As a front-end web developer, 
+          <br></br>
+          <br></br>
+          I have developed a diverse set of skills that 
+          enable me to create beautiful and functional websites and web applications. 
+          Some of my key skills include:
+        </p>
       <div className='text-left mx-auto grid grid-cols-2 grid-rows-3 gap-7
-        sm:grid-cols-3 md:grid-cols-4'>
+        sm:grid-cols-3 md:grid-cols-4 '
+      >
         {
           skills.map((skill) => {
             return (
               <>
-                <DisplayCard 
+                <SingleCard 
                   icon={skill.icon} 
                   iconSize={skill.iconSize} 
                 />
