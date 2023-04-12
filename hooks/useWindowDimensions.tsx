@@ -9,7 +9,7 @@ export default function useWindowSize() {
       height: window.innerHeight
     };
   }
-
+  
   const [windowSize, setWindowSize] = useState(getSize);
 
   useEffect(() => {
