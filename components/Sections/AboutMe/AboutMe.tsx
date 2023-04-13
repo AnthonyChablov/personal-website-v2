@@ -23,10 +23,10 @@ const AboutMe = () => {
               <div className='text-left text-md font-light text-slate-600'>
                   {text.map((text,i)=>{
                       return (
-                        <>
-                          <p key={i}>{text}</p>
+                        <div key={i}>
+                          <p >{text}</p>
                           <br></br>
-                        </>
+                        </div>
                       );
                     })
                   }

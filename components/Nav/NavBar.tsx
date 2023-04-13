@@ -5,25 +5,22 @@ import Image from "next/image";
 import logo from '../../assets/images/navbar-logo.png';
 import SideDrawer from '../SideDrawer/SideDrawer';
 import NavMenu from './NavMenu';
-import useWindowSize from '../../hooks/useWindowDimensions';
+import useWindowSize from '../../hooks/useWindowWidth';
 import Icons from '../Common/Icons';
 import { useStateStore } from '../../store/useStore';
 
 const NavBar = () => {
 
-  /* Setting Mobile Nav */
+  /* State */
   const toggleSideBar = useStateStore(state => state.toggleSideBar);
   const setToggleSideBar = useStateStore(state => state.setToggleSideBar);
-  
+  const windowWidth = useStateStore(state => state.windowWidth);
   /* Setting Nav Color onScrollDown*/
   const [ color, setColor ] = useState(false);
   
   /* Setting Nav Bar disappear onScrollDown */
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  
-  /* Setting Window Width */
-  const windowWidth = (typeof window !== 'undefined') ? useWindowSize().width : 0;
 
   function changeColor(){
     (window.scrollY >= 90)

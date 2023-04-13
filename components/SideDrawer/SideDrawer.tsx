@@ -1,6 +1,6 @@
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import useWindowSize from '../../hooks/useWindowDimensions';
+import useWindowSize from '../../hooks/useWindowWidth';
 import Icons from '../Common/Icons';
 import NavMenu from '../Nav/NavMenu';
 import { useStateStore } from '../../store/useStore';

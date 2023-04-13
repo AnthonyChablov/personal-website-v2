@@ -10,11 +10,17 @@ import Footer from "../components/Footer/Footer";
 import AboutMe from "../components/Sections/AboutMe/AboutMe";
 import Education from "../components/Sections/Education/Education";
 import Projects from "../components/Sections/Projects/Projects";
-import useWindowSize from "../hooks/useWindowDimensions";
+import useWindowSize from "../hooks/useWindowWidth";
+import { useStateStore } from "../store/useStore";
 
 export default function Home() {
+  /* State */
+  const setWindowWidth = useStateStore(state => state.setWindowWidth);
+  const windowWidth = useStateStore(state => state.windowWidth);
 
-  const windowWidth = (typeof window !== 'undefined') ? useWindowSize().width : 0;
+  if (typeof window !== 'undefined') {
+    setWindowWidth(useWindowSize());
+  }
 
   return (
     <>

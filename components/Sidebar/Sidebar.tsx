@@ -22,9 +22,9 @@ const Sidebar = ({anchor, mode}:ISideBar) => {
                     ? (
                         <>
                             {
-                                ['github', 'linkedin', 'twitter'].map((iconName)=>{
+                                ['github', 'linkedin', 'twitter'].map((iconName, i)=>{
                                     return (
-                                        <IconButton className="mt-4 ">
+                                        <IconButton key={i} className="mt-4 ">
                                             <Icons type={iconName} size={iconSize}/>
                                         </IconButton>
                                     )

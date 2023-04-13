@@ -37,14 +37,14 @@ const Education = () => {
         sm:grid-cols-3 md:grid-cols-4 '
       >
         {
-          skills.map((skill) => {
+          skills.map((skill, i) => {
             return (
-              <>
+              <div key={i}>
                 <SingleCard 
                   icon={skill.icon} 
                   iconSize={skill.iconSize} 
                 />
-              </>
+              </div>
             )
           })
         }
