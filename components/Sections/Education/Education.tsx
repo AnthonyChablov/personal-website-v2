@@ -35,7 +35,7 @@ const Education = () => {
           <br></br>
           Some of my key skills include:
         </p>
-      <div className='text-left mx-auto grid grid-cols-2 grid-rows-3 gap-9
+      <div className='text-left mx-auto grid grid-cols-2 grid-rows-3 gap-11
         sm:grid-cols-3 md:grid-cols-4 mt-20'
       >
         {

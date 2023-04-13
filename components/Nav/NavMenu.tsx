@@ -2,6 +2,7 @@ import NavLink from "./NavLink";
 import Link from "next/link";
 import Button from "@mui/material/Button";
 import { useStateStore } from "../../store/useStore";
+import { motion } from "framer-motion";
 
 const navigationLinks= [
   {text: '01. About Me', linkTo: '#about'}, 
@@ -9,6 +10,22 @@ const navigationLinks= [
   {text: '03. Education', linkTo : '#education'}, 
   {text : '04. Contact', linkTo: '#contact'}
 ]
+
+/* Framer Motion animations */
+const listVariants ={
+  hidden:{opacity:0},
+  show:{
+    opacity:1,
+    transition:{
+      duration: 0.5,
+      delay: 0.5,
+      ease: 'easeInOut',
+      staggerChildren: 0.4
+    }
+  }
+}
+
+
 
 const NavMenu = () => {
 
@@ -21,9 +38,12 @@ const NavMenu = () => {
   
   return (
     <div className="h-screen lg:h-0">
-      <ul className={`flex items-center justify-between flex-col
-        lg:space-y-0 lg:space-x-9 lg:flex-row lg:items-center pt-40 lg:pt-0`
-      }>
+      <motion.ul className={`flex items-center justify-between flex-col
+        lg:space-y-0 lg:space-x-9 lg:flex-row lg:items-center pt-40 lg:pt-0`}
+        variants={listVariants}
+        initial='hidden'
+        animate='show'
+      >
         {
           navigationLinks.map((link, i)=>{
             return (
@@ -52,7 +72,7 @@ const NavMenu = () => {
             </Button>
           </Link>
         </li>
-      </ul>
+      </motion.ul>
     </div>
   )
 }
