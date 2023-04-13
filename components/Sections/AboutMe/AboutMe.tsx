@@ -14,7 +14,7 @@ const AboutMe = () => {
   const skills = ['JavaScript (ES6+)','TypeScript','React.js', 'Node.js', 'WordPress', 'Firebase' ,'MongoDb'  ,'Express.js'];
   
   return (
-    <section className="text-center tracking-wide mb-10 position pt-16" id='about'>
+    <section className="text-center tracking-wide mb-10 position pt-16 text-lg" id='about'>
         <div className=" left-0">
             <div className="flex items-center ">
                 <Header title={'01. About Me'}/>

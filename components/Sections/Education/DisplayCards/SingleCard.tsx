@@ -3,12 +3,14 @@ import Button from "@mui/material/Button"
 
 interface IDisplayCard{
     icon:string,
-    iconSize: number,
+    iconSize: number
 }
 
 const DisplayCard = ({icon, iconSize, }:IDisplayCard) => {
   return (
-    <Button className="flex flex-col items-center bg-slate-200 
+    <Button className=" 
+        box 
+        flex flex-col items-center bg-slate-200 
         rounded-lg cursor-default w-full p-4 shadow-md"
         variant="outlined"
     >

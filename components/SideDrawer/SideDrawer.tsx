@@ -1,17 +1,15 @@
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import useWindowSize from '../../hooks/useWindowWidth';
+import useWindowWidth from '../../hooks/useWindowWidth';
 import Icons from '../Common/Icons';
 import NavMenu from '../Nav/NavMenu';
 import { useStateStore } from '../../store/useStore';
 
-
-
 const SideDrawer = () => {
 
-    const windowWidth = (typeof window !== 'undefined') ? useWindowSize().width : 0;
+    const windowWidth = useWindowWidth();
     const drawerWidth = windowWidth <= 500 ? '100%' : '70%';
-
+    /* State */
     const toggleSideBar = useStateStore(state => state.toggleSideBar);
     const setToggleSideBar = useStateStore(state => state.setToggleSideBar);
     

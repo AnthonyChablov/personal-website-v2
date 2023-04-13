@@ -15,7 +15,7 @@ const Footer = () => {
             </Button>
         </Link >
         </div>
-        <div className="text-center lg:hidden">
+        <div className="text-center xl:hidden">
             <Link href={'https://github.com/AnthonyChablov'} target="_blank">
                 <IconButton >
                     <Icons type="github" size={30}/>

@@ -1,16 +1,21 @@
 import { useState, useEffect } from "react";
 
-export default function useWindowSize() {
+export default function useWindowWidth() {
 
-  const [width, setWidth] = useState(0);
-
-  const handleResize = () => setWidth(window.innerWidth);
-
+  const [width, setWidth] = useState(undefined);
+  
   useEffect(() => {
+
+      function handleResize(){
+        setWidth(window.innerWidth);
+      };
+
       handleResize();
+
       window.addEventListener('resize', handleResize);
+
       return () => window.removeEventListener('resize', handleResize);
-      
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return width;
