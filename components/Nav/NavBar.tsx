@@ -8,7 +8,25 @@ import NavMenu from './NavMenu';
 import useWindowWidth from '../../hooks/useWindowWidth';
 import Icons from '../Common/Icons';
 import { useStateStore } from '../../store/useStore';
-import { useAnimation, motion } from "framer-motion";
+import {  motion } from "framer-motion";
+
+/* Framer motion animations */
+const navigationLinksVariants={
+  hidden:{
+    opacity: 0,
+    y: -50
+  },
+  visible:{
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.3,
+      delay: 0.1,
+      ease: 'easeInOut'
+    }
+  }
+}
+
 
 const NavBar = () => {
 
@@ -53,16 +71,22 @@ const NavBar = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
-        <Link href="/">
-          <IconButton>
-            <Image 
-              src={logo} 
-              alt='logo' 
-              width={62}
-              height={0}
-            ></Image>
-          </IconButton>
-        </Link>
+        <motion.div
+          variants={navigationLinksVariants}
+          initial={'hidden'}
+          animate={'visible'}
+        >
+          <Link href="/">
+            <IconButton>
+              <Image 
+                src={logo} 
+                alt='logo' 
+                width={62}
+                height={0}
+              ></Image>
+            </IconButton>
+          </Link>
+        </motion.div>
         {
           ( windowWidth >= 1023 ) 
             ? <NavMenu/> 

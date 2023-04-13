@@ -17,15 +17,28 @@ const listVariants ={
   show:{
     opacity:1,
     transition:{
-      duration: 0.5,
-      delay: 0.5,
+      duration: 0.25,
+      delay: 0.15,
       ease: 'easeInOut',
       staggerChildren: 0.4
     }
   }
 }
-
-
+const navigationLinksVariants={
+  hidden:{
+    opacity: 0,
+    y: -50
+  },
+  visible:{
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+      delay: 0.45,
+      ease: 'easeInOut'
+    }
+  }
+}
 
 const NavMenu = () => {
 
@@ -47,15 +60,32 @@ const NavMenu = () => {
         {
           navigationLinks.map((link, i)=>{
             return (
-              <NavLink 
-                key={i} 
-                text={link.text} 
-                linkTo={link.linkTo}
-              />
+              <motion.div key={i}
+                variants={navigationLinksVariants}
+                initial={'hidden'}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 0.4,
+                    delay: 0.13 * i,
+                    ease: 'easeInOut'
+                  }
+                }}
+              >
+                <NavLink 
+                  text={link.text} 
+                  linkTo={link.linkTo}
+                />
+              </motion.div>
             );
           })
         }
-        <li>
+        <motion.li
+          variants={navigationLinksVariants}
+          initial={'hidden'}
+          animate={'visible'}
+        >
           <Link href="/">
             <Button 
               className="text-xl px-8 py-3 bg-white text-slate-700 font-medium 
@@ -71,7 +101,7 @@ const NavMenu = () => {
               Get My CV
             </Button>
           </Link>
-        </li>
+        </motion.li>
       </motion.ul>
     </div>
   )

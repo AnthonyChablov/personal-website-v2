@@ -9,22 +9,7 @@ interface INavLink {
     linkTo: string
 }
 
-/* framer motion animations */
-const navigationLinksVariants={
-  hidden:{
-    opacity: 0,
-    y: -50
-  },
-  visible:{
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      delay: 0.5,
-      ease: 'easeInOut'
-    }
-  }
-}
+
 
 const NavLink = ({text, linkTo}:INavLink) => {
 
@@ -32,10 +17,7 @@ const NavLink = ({text, linkTo}:INavLink) => {
   const setToggleSideBar = useStateStore(state => state.setToggleSideBar);
 
   return (
-    <motion.li className=' text-2xl lg:text-sm text-slate-700 font-normal hover:underline pb-10 lg:pb-0'
-      variants={navigationLinksVariants}
-      initial='hidden'
-      animate='visible'
+    <li className=' text-2xl lg:text-sm text-slate-700 font-normal hover:underline pb-10 lg:pb-0'
       onClick={()=>{
         setToggleSideBar(!toggleSideBar);
       }}
@@ -43,7 +25,7 @@ const NavLink = ({text, linkTo}:INavLink) => {
         <Link href={linkTo} scroll={false}>
             {text}
         </Link>
-    </motion.li>
+    </li>
   );
 }
 
