@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import Link from "next/link";
 import IconButton from "@mui/material/IconButton";
 import Image from "next/image";
@@ -8,7 +8,7 @@ import NavMenu from './NavMenu';
 import useWindowWidth from '../../hooks/useWindowWidth';
 import Icons from '../Common/Icons';
 import { useStateStore } from '../../store/useStore';
-import {  motion } from "framer-motion";
+import {  motion, useMotionValue, useScroll, useTransform, useMotionTemplate } from "framer-motion";
 
 /* Framer motion animations */
 const navigationLinksVariants={
@@ -27,6 +27,7 @@ const navigationLinksVariants={
   }
 }
 
+let clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 
 const NavBar = () => {
 
@@ -61,7 +62,40 @@ const NavBar = () => {
     setLastScrollY(window.scrollY); 
   
   },[lastScrollY]);
+
+
+
   
+
+  function useBoundedScroll(bounds) {
+    let { scrollY } = useScroll();
+    let scrollYBounded = useMotionValue(0);
+    let scrollYBoundedProgress = useTransform(
+      scrollYBounded,
+      [0, bounds],
+      [0, 1]
+    );
+  
+    useEffect(() => {
+      return scrollY.onChange((current) => {
+        let previous = scrollY.getPrevious();
+        let diff = current - previous;
+        let newScrollYBounded = scrollYBounded.get() + diff;
+  
+        scrollYBounded.set(clamp(newScrollYBounded, 0, bounds));
+      });
+    }, [bounds, scrollY, scrollYBounded]);
+  
+    return { scrollYBounded, scrollYBoundedProgress };
+  }
+
+  let { scrollYBoundedProgress } = useBoundedScroll(400);
+  let scrollYBoundedProgressThrottled = useTransform(
+    scrollYBoundedProgress,
+    [0, 0.75, 1],
+    [0, 0, 1]
+  );
+
   return (
     <>
       <motion.nav className={` px-4 py-3 lg:px-20 mx-auto flex justify-between 
@@ -75,6 +109,13 @@ const NavBar = () => {
           variants={navigationLinksVariants}
           initial={'hidden'}
           animate={'visible'}
+          style={{
+            scale: useTransform(
+              scrollYBoundedProgressThrottled,
+              [0, 1],
+              [1, 0.9]
+            ),
+          }}
         >
           <Link href="/">
             <IconButton>
@@ -87,9 +128,10 @@ const NavBar = () => {
             </IconButton>
           </Link>
         </motion.div>
+       
         {
           ( windowWidth >= 1023 ) 
-            ? <NavMenu/> 
+            ? (<NavMenu/>) 
             : (
                 <IconButton 
                   onClick={() => { 

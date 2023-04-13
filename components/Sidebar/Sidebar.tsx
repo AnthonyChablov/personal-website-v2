@@ -1,4 +1,5 @@
 import IconButton from "@mui/material/IconButton";
+import { motion } from "framer-motion";
 import Icons from "../Common/Icons";
 import VerticalDivider from "../Common/VerticalDivider";
 import Button from "@mui/material/Button";
@@ -15,15 +16,36 @@ const linkData = [
     {icon :'twitter', link: 'https://github.com/AnthonyChablov'}
 ];
 
+/* framer motion animations */
+/* Framer motion animations */
+const sidebarVariants={
+    hidden:{
+      opacity: 0,
+      y: -10
+    },
+    visible:{
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.3,
+        delay: 0.1,
+        ease: 'easeInOut'
+      }
+    }
+  }
+
 const Sidebar = ({anchor, mode}:ISideBar) => {
 
     const iconSize = 25;
 
     return (
-        <div className={`fixed bottom-0 h-fit 
+        <motion.div className={`fixed bottom-0 h-fit 
             ${(anchor === 'left') && 'left-20'} 
-            ${(anchor === 'right') && 'right-0'}`
-        }>
+            ${(anchor === 'right') && 'right-0'}`}
+            variants={sidebarVariants}    
+            initial="hidden"
+            animate="visible"
+        >
             <div className="flex flex-col items-center justify-center">
                 {
                     (mode === 'icons') 
@@ -56,7 +78,7 @@ const Sidebar = ({anchor, mode}:ISideBar) => {
                 }
             </div>
             <VerticalDivider/>
-        </div>
+        </motion.div>
     )
 }
 
