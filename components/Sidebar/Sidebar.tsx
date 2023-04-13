@@ -27,8 +27,8 @@ const sidebarVariants={
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.3,
-        delay: 0.1,
+        duration: 1,
+        delay: .8,
         ease: 'easeInOut'
       }
     }
@@ -44,7 +44,7 @@ const Sidebar = ({anchor, mode}:ISideBar) => {
             ${(anchor === 'right') && 'right-0'}`}
             variants={sidebarVariants}    
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
         >
             <div className="flex flex-col items-center justify-center">
                 {

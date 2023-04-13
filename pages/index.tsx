@@ -19,13 +19,13 @@ export default function Home() {
   const windowWidth = useWindowWidth();
 
   return (
-    <>
+    <div className="">
       <Head>
         <title key={'title'}>Anthony Chablov</title>
       </Head>
       <div className="bg-zinc-100">
         <NavBar/>
-        <div className="h-fit px-10 py-8 mx-auto max-w-5xl">
+        <div className="h-fit px-10 py-8 mx-auto max-w-5xl ">
           <Hero/>
           <AboutMe/>
           <Projects/>
@@ -43,6 +43,6 @@ export default function Home() {
         )
       }
       
-    </>
+    </div>
   );
 }
