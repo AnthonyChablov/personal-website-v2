@@ -21,9 +21,9 @@ const ProjectCard = ({subheader, id, header, paragraph, madewith, github, link} 
   const windowWidth = useWindowWidth();
 
   return (
-    <div className='flex'>
+    <div className='flex mt-4'>
       <Button 
-        className="w-full p-6 bg-slate-200 hover:bg-slate-300 mx-auto h-fit shadow-md"
+        className="w-full py-10 px-10 bg-slate-200 hover:bg-slate-300 mx-auto h-fit shadow-md"
         variant='outlined'
       >
         <div className={` w-full flex 
@@ -61,12 +61,7 @@ const ProjectCard = ({subheader, id, header, paragraph, madewith, github, link} 
           {/* image  */}
           <div className="collapse sm:visible">
             <div className={
-              `flex items-center mt-6 shadow-md 
-              ${
-                id % 2 === 1 
-                  ? 'ml-1' 
-                  : 'mr-1'
-              }`}
+              `flex items-center mt-9 shadow-md`}
             >
               <div className="rounded-md overflow-hidden hue-rotate-0 sm:h-fit 
               bg-gray-900 opacity-75 blur-xs"
@@ -74,11 +69,11 @@ const ProjectCard = ({subheader, id, header, paragraph, madewith, github, link} 
                 {
                   windowWidth > 768 &&
                     <Image
-                    src={placeholder}
-                    alt='project image'
-                    width={710}
-                    height={700}
-                  />
+                      src={placeholder}
+                      alt='project image'
+                      width={775}
+                      height={700}
+                    />
                 }
               </div>
             </div>

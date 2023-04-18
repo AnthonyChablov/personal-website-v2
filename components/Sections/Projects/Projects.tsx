@@ -45,7 +45,7 @@ const Projects = () => {
         <div className="flex items-center justify-center">
             <Header title={'02. My Projects'}/>
         </div>
-        <div className="space space-y-12">
+        <div className="space space-y-16">
           {
             projectData.map((elem, i)=>{
               return (

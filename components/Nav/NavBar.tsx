@@ -63,10 +63,6 @@ const NavBar = () => {
   
   },[lastScrollY]);
 
-
-
-  
-
   function useBoundedScroll(bounds) {
     let { scrollY } = useScroll();
     let scrollYBounded = useMotionValue(0);
