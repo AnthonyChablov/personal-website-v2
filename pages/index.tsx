@@ -11,11 +11,9 @@ import AboutMe from "../components/Sections/AboutMe/AboutMe";
 import Education from "../components/Sections/Education/Education";
 import Projects from "../components/Sections/Projects/Projects";
 import useWindowWidth from "../hooks/useWindowWidth";
-import { useStateStore } from "../store/useStore";
 
 export default function Home() {
-  /* State */
-  const setWindowWidth = useStateStore(state => state.setWindowWidth);
+
   const windowWidth = useWindowWidth();
 
   return (

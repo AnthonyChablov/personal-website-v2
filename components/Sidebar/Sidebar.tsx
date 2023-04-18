@@ -16,7 +16,7 @@ const linkData = [
     {icon :'twitter', link: 'https://github.com/AnthonyChablov'}
 ];
 
-/* framer motion animations */
+
 /* Framer motion animations */
 const sidebarVariants={
     hidden:{
