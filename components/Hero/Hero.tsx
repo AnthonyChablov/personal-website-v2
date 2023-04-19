@@ -2,65 +2,17 @@ import Image from "next/image"
 import { motion } from "framer-motion";
 import profileImg from '../../assets/images/profileImg.jpg'
 import Button from '@mui/material/Button';
-
-/* Framer motion animations */
-const heroImgVariants={
-  hidden:{
-    opacity: 0,
-    y: -20
-  },
-  visible:{
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      delay: 1,
-      ease: 'easeInOut'
-    }
-  }
-}
-
-const heroSubHeaderVariants={
-  hidden:{
-    opacity: 0,
-    y: -15
-  },
-  visible:{
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      delay: 1.4,
-      ease: 'easeInOut'
-    }
-  }
-}
-
-const heroHeaderVariants={
-  hidden:{
-    opacity: 0,
-    y: -20
-  },
-  visible:{
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      delay: 1.4,
-      ease: 'easeInOut'
-    }
-  }
-}
+import { heroImgVariants, heroSubHeaderVariants, heroHeaderVariants } from "../../variants";
 
 const Hero = () => {
   return (
-    <div className="h-fit text-center mb-24">
+    <div className="h-fit text-center mb-24 mt-4">
         <motion.div className="flex justify-center items-center"
           variants={heroImgVariants}
           initial="hidden"
           animate="visible"
         >
-            <div className="rounded-full overflow-hidden w-fit flex mt-8">
+            <div className="rounded-full overflow-hidden w-fit flex mt-6">
                 <Image 
                     src={profileImg} 
                     height={100}
@@ -101,7 +53,9 @@ const Hero = () => {
               rounded-md shadow-md" 
             variant="contained"
           >
+            <a href="mailto: aechablov@gmail.com">
               Contact Me
+            </a>
           </Button>
         </motion.div>
     </div>

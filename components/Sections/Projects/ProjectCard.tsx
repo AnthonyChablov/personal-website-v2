@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import Icons from '../../Common/Icons';
 import Button from "@mui/material/Button";
 import Link from 'next/link';
@@ -13,15 +14,40 @@ interface IProjectCard {
   paragraph: string, 
   madewith: string,
   github: string,
-  link: string
+  link: string,
+
 }
 
 const ProjectCard = ({subheader, id, header, paragraph, madewith, github, link} : IProjectCard) => {
 
   const windowWidth = useWindowWidth();
 
+  const projectCardVariants={
+    hidden:{
+        opacity: 0,
+        x: id % 2 === 0 ? 25 : -25,
+        y: id % 2 === 0 ? 25 : -25
+    },
+    visible:{
+        opacity: 1,
+        y: 0,
+        x:0,
+        transition: {
+        duration: 0.5,
+        delay: 0.1 * id,
+        ease: 'easeInOut'
+        }
+    }
+  }
+
+
   return (
-    <div className='flex mt-4'>
+    <motion.div className='flex mt-4'
+      variants={projectCardVariants}
+      initial={'hidden'}
+      whileInView={'visible'}
+      viewport={{ once: true }}
+    >
       <Button 
         className="w-full py-10 px-10 bg-slate-200 hover:bg-slate-300 mx-auto h-fit shadow-md"
         variant='outlined'
@@ -80,7 +106,7 @@ const ProjectCard = ({subheader, id, header, paragraph, madewith, github, link} 
           </div>
         </div>
       </Button>
-    </div>
+    </motion.div>
   )
 }
 

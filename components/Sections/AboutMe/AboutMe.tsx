@@ -1,5 +1,6 @@
+import { motion } from 'framer-motion';
 import Header from '../../Common/Header';
-
+import { sectionHeaderVariants , sectionContentVariants} from '../../../variants';
 
 const AboutMe = () => {
 
@@ -16,32 +17,27 @@ const AboutMe = () => {
   return (
     <section className="text-center tracking-wide mb-10 position pt-16 text-lg" id='about'>
         <div className=" left-0">
-            <div className="flex items-center ">
+            <div className="flex items-center" >
                 <Header title={'01. About Me'}/>
             </div>
-            <div>
-              <div className='text-left text-md font-light text-slate-600'>
-                  {text.map((text,i)=>{
-                      return (
-                        <div key={i}>
-                          <p >{text}</p>
-                          <br></br>
-                        </div>
-                      );
-                    })
-                  }
-                  <p></p>
-                  {/* <ul className='grid grid-cols-2 grid-rows-2 mt-5 text-sm'>
-                    {skills.map((elem,i)=>{
-                      return (
-                        <li key={i} className='text-left list-disc list-inside'>
-                          {elem}
-                        </li>
-                      );
-                    })}
-                  </ul> */}
-              </div>
-            </div>
+            
+            <motion.div className='text-left text-md font-light text-slate-600'
+              variants={sectionContentVariants}
+              initial="hidden"
+              whileInView={'visible'}
+              viewport={{ once: true }}
+            >
+              {text.map((text,i)=>{
+                  return (
+                    <div key={i}>
+                      <p >{text}</p>
+                      <br></br>
+                    </div>
+                  );
+                })
+              }
+              <p></p>
+            </motion.div>
         </div>
     </section>
   )

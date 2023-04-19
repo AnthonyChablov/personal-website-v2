@@ -22,19 +22,21 @@ const skills = [
 
 const Education = () => {
 
+ 
+
   return (
     <section className="text-center tracking-wide mb-10 pt-16" id='education'>
       <div className="flex items-center justify-center">
         <Header title='03. Skills & Education' />
       </div>
-        <p className='text-lg font-light text-left text-slate-800 '>
-          As a front-end web developer, 
-          I have developed a diverse set of skills that 
-          enable me to create beautiful and functional websites and web applications. 
-          <br></br>
-          <br></br>
-          Some of my key skills include:
-        </p>
+      <p className='text-lg font-light text-left text-slate-800 '>
+        As a front-end web developer, 
+        I have developed a diverse set of skills that 
+        enable me to create beautiful and functional websites and web applications. 
+        <br></br>
+        <br></br>
+        Some of my key skills include:
+      </p>
       <div className='text-left mx-auto grid grid-cols-2 grid-rows-3 gap-11
         sm:grid-cols-3 md:grid-cols-4 mt-20'
       >
@@ -43,6 +45,7 @@ const Education = () => {
             return (
               <div key={i}>
                 <SingleCard 
+                  id={i}
                   icon={skill.icon} 
                   iconSize={skill.iconSize} 
                 />

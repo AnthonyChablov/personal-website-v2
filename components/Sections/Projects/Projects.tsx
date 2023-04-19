@@ -1,7 +1,7 @@
 import Header from '../../Common/Header';
 import ProjectCard from './ProjectCard';
-
-
+import { motion } from 'framer-motion';
+import { sectionHeaderVariants } from '../../../variants';
 
 const Projects = () => {
 

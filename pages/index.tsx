@@ -1,7 +1,4 @@
 import Head from "next/head";
-import { useRef, useEffect } from "react";
-import { Power3 } from "gsap";
-import { gsap } from "gsap";
 import NavBar from "../components/Nav/NavBar";
 import Hero from "../components/Hero/Hero";
 import Sidebar from "../components/SideBar/SideBar";
@@ -40,7 +37,6 @@ export default function Home() {
           </>
         )
       }
-      
     </div>
   );
 }
