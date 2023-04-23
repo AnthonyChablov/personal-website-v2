@@ -1,6 +1,7 @@
 import React from 'react'
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
+import Link from 'next/link';
 
 interface ISectionLayout {
     header: string, 
@@ -20,12 +21,14 @@ const SectionLayout = ({header, subheader, content, buttonText} : ISectionLayout
             in web-development, my inbox is always open. Whether you have a question or just want to say 
             hi, I will get back to you as soon as possible!
         </p>
-        <Button className='mt-12 px-8 py-3 bg-slate-700 text-slate-100 font-medium 
-            capitalize  hover:bg-slate-100 hover:text-slate-700 text-md
-            rounded-md shadow-md'
-        >
-            <p>Say Hello</p>
-        </Button>
+        <Link href={'mailto: aechablov@gmail.com'}>
+            <Button className='mt-12 px-8 py-3 bg-slate-700 text-slate-100 font-medium 
+                capitalize  hover:bg-slate-100 hover:text-slate-700 text-md
+                rounded-md shadow-md'
+            >
+                <p>Say Hello</p>
+            </Button>
+        </Link>
     </div>
   )
 }

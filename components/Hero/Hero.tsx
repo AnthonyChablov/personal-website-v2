@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import profileImg from '../../assets/images/profileImg.jpg'
 import Button from '@mui/material/Button';
 import { heroImgVariants, heroSubHeaderVariants, heroHeaderVariants } from "../../variants";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -47,16 +48,18 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
         >
-          <Button 
-            className="mt-12 px-7 py-4 bg-slate-600 text-slate-100
-              capitalize  hover:bg-slate-100 hover:text-slate-700 text-md
-              rounded-md shadow-md" 
-            variant="contained"
-          >
-            <a href="mailto: aechablov@gmail.com">
-              Contact Me
-            </a>
-          </Button>
+          <Link href="mailto: aechablov@gmail.com">
+            <Button 
+              className="mt-12 px-7 py-4 bg-slate-600 text-slate-100
+                capitalize  hover:bg-slate-100 hover:text-slate-700 text-md
+                rounded-md shadow-md" 
+              variant="contained"
+            >
+              <p>
+                Contact Me
+              </p>
+            </Button>
+          </Link>
         </motion.div>
     </div>
   );
