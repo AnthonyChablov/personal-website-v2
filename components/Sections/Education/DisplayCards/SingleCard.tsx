@@ -14,7 +14,7 @@ const DisplayCard = ({id, icon, iconSize, }:IDisplayCard) => {
   const skillCardVariants={
     hidden:{
         opacity: 0,
-        y: id % 2 === 0 ? 25 : -25,
+        y: id % 2 === 0 ? -25 : -10,
         x: id % 2 === 0 ? -10 : 10
     },
     visible:{

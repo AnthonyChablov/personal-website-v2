@@ -25,8 +25,8 @@ const ProjectCard = ({subheader, id, header, paragraph, madewith, github, link} 
   const projectCardVariants={
     hidden:{
         opacity: 0,
-        x: id % 2 === 0 ? 25 : -25,
-        y: id % 2 === 0 ? 25 : -25
+        x: id % 2 === 0 ? 10 : -10,
+        y: -20
     },
     visible:{
         opacity: 1,
