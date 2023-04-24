@@ -55,9 +55,7 @@ const Hero = () => {
                 rounded-md shadow-md" 
               variant="contained"
             >
-              <p>
-                Contact Me
-              </p>
+              <p> Contact Me </p>
             </Button>
           </Link>
         </motion.div>

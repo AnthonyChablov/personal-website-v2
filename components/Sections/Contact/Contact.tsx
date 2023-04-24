@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import { sectionHeaderVariants, sectionSubHeaderVariants, sectionContentVariants } from '../../../variants';
+import Link from 'next/link';
 
 const Contact = () => {
   return (
@@ -32,14 +33,16 @@ const Contact = () => {
           whileInView={'visible'}
           viewport={{ once: true }}
         >
+          <Link href="mailto: aechablov@gmail.com"> 
           <Button className='mt-12 px-8 py-3 bg-slate-700 text-slate-100 font-medium 
               capitalize  hover:bg-slate-100 hover:text-slate-700 text-md
               rounded-md shadow-md'
           >
-            <a href="mailto: aechablov@gmail.com">
+            <p>
               Say Hello
-            </a>
+            </p>
           </Button>
+          </Link>
         </motion.div>
         
     </section>

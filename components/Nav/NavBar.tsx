@@ -124,7 +124,6 @@ const NavBar = () => {
             </IconButton>
           </Link>
         </motion.div>
-       
         {
           ( windowWidth >= 1023 ) 
             ? (<NavMenu/>) 
