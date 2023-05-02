@@ -8,8 +8,8 @@ const Contact = () => {
   return (
     <section className="text-center tracking-wide pt-1" id='contact' >
         <Divider className="w-4/12 mx-auto bg-zinc-300 mt-20 mb-24"/>
-        <p className="text-lg text-zinc-600">04. What's Next?</p>
-        <motion.h4 className="text-4xl font-semibold text-zinc-800 my-5 "
+        <p className="text-lg text-zinc-600 dark:text-slate-300">04. What's Next?</p>
+        <motion.h4 className="text-4xl font-semibold text-zinc-800 my-5 dark:text-slate-200"
           variants={sectionHeaderVariants}
           initial={'hidden'}
           whileInView={'visible'}
@@ -17,7 +17,7 @@ const Contact = () => {
         > 
           Get In Touch
         </motion.h4>
-        <motion.p className="text-zinc-700  mx-auto text-lg mt-8 font-light"
+        <motion.p className="text-zinc-700  mx-auto text-lg mt-8 font-light dark:text-slate-300"
           variants={sectionSubHeaderVariants}
           initial={'hidden'}
           whileInView={'visible'}
@@ -35,7 +35,7 @@ const Contact = () => {
         >
           <Link href="mailto: aechablov@gmail.com"> 
           <Button className='mt-12 px-8 py-3 bg-slate-700 text-slate-100 font-medium 
-              capitalize  hover:bg-slate-100 hover:text-slate-700 text-md
+              capitalize  hover:bg-slate-100 hover:text-slate-700 text-md 
               rounded-md shadow-md'
           >
             <p>

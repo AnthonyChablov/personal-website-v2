@@ -49,14 +49,14 @@ const ProjectCard = ({subheader, id, header, paragraph, madewith, github, link} 
       viewport={{ once: true }}
     >
       <Button 
-        className="w-full py-10 px-10 bg-slate-200 hover:bg-slate-300 mx-auto h-fit shadow-md"
+        className="w-full py-10 px-10 bg-slate-200 hover:bg-slate-300 mx-auto h-fit shadow-md dark:bg-slate-900 "
         variant='outlined'
       >
         <div className={` w-full flex 
           ${id % 2 === 1 && 'flex-row-reverse'}`}
         >
           {/* Info */}
-          <div className={`w-full text-slate-700 text-md capitalize 
+          <div className={`w-full text-slate-700 text-md capitalize dark:text-slate-300
               ${id % 2 === 0 
                   ? 'text-left mr-10' 
                   : 'text-right ml-10'

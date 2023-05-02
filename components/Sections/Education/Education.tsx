@@ -29,7 +29,7 @@ const Education = () => {
       <div className="flex items-center justify-center">
         <Header title='03. Skills & Education' />
       </div>
-      <p className='text-lg font-light text-left text-slate-800 '>
+      <p className='text-lg font-light text-left text-slate-800 dark:text-slate-300'>
         As a front-end web developer, 
         I have developed a diverse set of skills that 
         enable me to create beautiful and functional websites and web applications. 
@@ -38,7 +38,7 @@ const Education = () => {
         Some of my key skills include:
       </p>
       <div className='text-left mx-auto grid grid-cols-2 grid-rows-3 gap-11
-        sm:grid-cols-3 md:grid-cols-4 mt-20'
+        sm:grid-cols-3 md:grid-cols-4 mt-20 '
       >
         {
           skills.map((skill, i) => {

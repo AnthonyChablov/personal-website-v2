@@ -29,7 +29,7 @@ const Sidebar = ({anchor, mode}:ISideBar) => {
             initial="hidden"
             whileInView="visible"
         >
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center ">
                 {(mode === 'icons') 
                     ? (
                         <>
@@ -48,7 +48,7 @@ const Sidebar = ({anchor, mode}:ISideBar) => {
                     ) : (
                         <div className="rotate-90 mb-16">
                             <Button 
-                                className="text-sm lowercase text-zinc-700"
+                                className="text-sm lowercase text-zinc-700 dark:text-slate-300"
                                 variant='text'
                             >
                                 <a href="mailto: aechablov@gmail.com  ">

@@ -56,27 +56,30 @@ const NavMenu = () => {
 
   function onClickDarkModeToggle(){
     setTheme(theme === 'dark' ? 'light' : 'dark');
+    localStorage.setItem("theme-mode-ac", theme === 'dark' ? 'light' : 'dark');
   }
   
   return (
     <div className="h-screen lg:h-0 ">
       
       <motion.ul className={`pt-40 flex items-center justify-between flex-col
-        lg:space-y-0 lg:space-x-9 lg:flex-row lg:items-center lg:pt-0` }
+        lg:space-y-0 lg:space-x-9 lg:flex-row lg:items-center lg:pt-0 lg:mt-2` }
         variants={listVariants}
         initial='hidden'
         animate='show'
       >
         {/* Dark mode toggle */}
-        <IconButton onClick={ () => {
-          onClickDarkModeToggle();
-        }}> {
-          theme === 'light'
-            ? <Icons type="sun" size={25}/>
-            : <Icons type="moon" size={25}/>
-        }
-          
-        </IconButton>
+        <div className="mb-8 lg:mb-0">
+          <IconButton onClick={ () => {
+            onClickDarkModeToggle();
+          }}> {
+            theme === 'light'
+              ? <Icons type="moon" size={25}/>
+              : <Icons type="sun" size={25}/>
+          }
+          </IconButton>
+        </div>
+        
         {
           navigationLinks.map((link, i)=>{
             return (

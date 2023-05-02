@@ -6,9 +6,9 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-        <div className=" text-center mt-60">
+        <div className=" text-center mt-60  ">
         <Link href={'https://github.com/AnthonyChablov'} target="_blank">
-            <Button className="text-sm capitalize font-light text-slate-800 p-2"
+            <Button className="text-sm capitalize font-light text-slate-800 p-2 dark:text-slate-300"
                 variant='text'
             >
                 Created & Built By Anthony Chablov    

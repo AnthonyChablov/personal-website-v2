@@ -21,7 +21,7 @@ const AboutMe = () => {
                 <Header title={'01. About Me'}/>
             </div>
             
-            <motion.div className='text-left text-md font-light text-slate-600'
+            <motion.div className='text-left text-md font-light text-slate-600 dark:text-slate-300'
               variants={sectionContentVariants}
               initial="hidden"
               whileInView={'visible'}

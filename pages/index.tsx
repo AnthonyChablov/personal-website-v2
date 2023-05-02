@@ -14,20 +14,23 @@ import { useStateStore } from "../store/useStore";
 export default function Home() {
 
   /* State */
-  const setTheme = useStateStore(state => state.setTheme);
   const theme = useStateStore(state => state.theme);
-
+  const setTheme = useStateStore(state => state.setTheme);
+  /* Hooks */
   const windowWidth = useWindowWidth();
 
-  
   useEffect(() => {
-    
-    if (theme === 'dark' ){
+
+    const themeMode = localStorage.getItem("theme-mode-ac");
+
+    if (theme === 'dark' || themeMode === 'dark' ) {
       document.documentElement.classList.add('dark');
+      setTheme('dark');
     }else{
       document.documentElement.classList.remove('dark');
+      setTheme('light');
     }
-    
+
   }, [theme]);
 
   return (
@@ -35,7 +38,7 @@ export default function Home() {
       <Head>
         <title key={'title'}>Anthony Chablov</title>
       </Head>
-      <div className="bg-zinc-100 ">
+      <div className="bg-zinc-100 dark:bg-slate-800 ">
         <NavBar/>
         <div className="h-fit px-10 py-8 mx-auto max-w-5xl ">
           <Hero/>

@@ -4,6 +4,7 @@ import {HiDatabase} from "react-icons/hi";
 import {SiTypescript, SiJavascript, SiTailwindcss, SiFirebase, SiNextdotjs} from 'react-icons/si';
 import {TbExternalLink, TbSchool} from 'react-icons/tb';
 import {BsSunFill, BsFillMoonFill} from 'react-icons/bs';
+import { useStateStore } from '../../store/useStore';
 
 interface IIcons {
     type : string,
@@ -11,32 +12,36 @@ interface IIcons {
 }
 
 const Icons = ({ type, size }:IIcons) => {
+
+  const theme = useStateStore(state => state.theme);
+  const color = (theme === 'dark') ? 'rgb(203 213 225)' : 'rgb(51 65 85)';
+
   return (
     <div className='text-slate-700'>{
         {
-          moon : <BsFillMoonFill size={size}/> , 
-          sun : <BsSunFill size={size}/> ,
-          school: <TbSchool size={size}/> ,
-          mongoDB: <DiMongodb size={size}/> ,
-          next: <SiNextdotjs size={size}/> ,
-          menu: <AiOutlineMenu size={size}/> ,
-          close: <AiOutlineClose size={size}/>,
-          link : <TbExternalLink size={size}/>,
-          twitter : <AiFillTwitterSquare size={size}/>,
-          linkedin: <AiFillLinkedin size={size}/>,
-          github: <AiFillGithub size={size}/>,
-          html: <AiFillHtml5 size={size}/>,
-          css: <DiCss3 size={size}/>,
-          scss:<DiSass size={size}/>,
-          react: <DiReact size={size}/>,
-          node:<DiNodejs size={size}/>,
-          npm: <DiNpm size={size}/>,
-          python: <DiPython size={size}/>,
-          database: <HiDatabase size={size}/>,
-          javascript: <SiJavascript size={size}/>,
-          tailwind: <SiTailwindcss size={size}/>,
-          firebase: <SiFirebase size={size}/>,
-          typescript: <SiTypescript size={size}/>,
+          moon : <BsFillMoonFill size={size} color={color} /> , 
+          sun : <BsSunFill size={size} color={color}/> ,
+          school: <TbSchool size={size} color={color}/> ,
+          mongoDB: <DiMongodb size={size} color={color}/> ,
+          next: <SiNextdotjs size={size} color={color}/> ,
+          menu: <AiOutlineMenu size={size} color={color}/> ,
+          close: <AiOutlineClose size={size} color={color}/>,
+          link : <TbExternalLink size={size} color={color}/>,
+          twitter : <AiFillTwitterSquare size={size} color={color}/>,
+          linkedin: <AiFillLinkedin size={size} color={color}/>,
+          github: <AiFillGithub size={size} color={color} />,
+          html: <AiFillHtml5 size={size} color={color}/>,
+          css: <DiCss3 size={size} color={color}/>,
+          scss:<DiSass size={size} color={color}/>,
+          react: <DiReact size={size} color={color} />,
+          node:<DiNodejs size={size} color={color}/>,
+          npm: <DiNpm size={size} color={color}/>,
+          python: <DiPython size={size} color={color}/>,
+          database: <HiDatabase size={size} color={color}/>,
+          javascript: <SiJavascript size={size} color={color}/>,
+          tailwind: <SiTailwindcss size={size} color={color}/>,
+          firebase: <SiFirebase size={size} color={color}/>,
+          typescript: <SiTypescript size={size} color={color}/>,
         }[type]
     }</div>
   )

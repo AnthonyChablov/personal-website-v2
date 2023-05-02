@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="h-fit text-center mb-24 mt-4">
+    <div className="h-fit text-center mb-24 mt-4 ">
         <motion.div className="flex justify-center items-center"
           variants={heroImgVariants}
           initial="hidden"
@@ -22,21 +22,21 @@ const Hero = () => {
                 ></Image>
             </div>
         </motion.div>
-        <motion.p className="mt-14 uppercase font-light text-slate-700 text-md"
+        <motion.p className="mt-14 uppercase font-light text-slate-700 text-md dark:text-slate-300"
           variants={heroSubHeaderVariants}
           initial="hidden"
           animate="visible"
         >
           Anthony Chablov
         </motion.p>
-        <motion.h1 className="mt-9 text-4xl text-slate-800 font-medium"
+        <motion.h1 className="mt-9 text-4xl text-slate-800 font-medium dark:text-slate-200"
           variants={heroHeaderVariants}
           initial="hidden"
           animate="visible"
         >
           Frontend Web Developer
         </motion.h1>
-        <motion.p className="mt-12 font-light text-slate-700 text-md"
+        <motion.p className="mt-12 font-light text-slate-700 text-md dark:text-slate-300"
           variants={heroHeaderVariants}
           initial="hidden"
           animate="visible"

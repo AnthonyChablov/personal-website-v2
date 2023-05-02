@@ -7,11 +7,17 @@ import { useStateStore } from '../../store/useStore';
 
 const SideDrawer = () => {
 
-    const windowWidth = useWindowWidth();
-    const drawerWidth = windowWidth <= 500 ? '100%' : '70%';
     /* State */
     const toggleSideBar = useStateStore(state => state.toggleSideBar);
     const setToggleSideBar = useStateStore(state => state.setToggleSideBar);
+    const theme = useStateStore(state => state.theme);
+
+    /* Hooks */
+    const windowWidth = useWindowWidth();
+
+    /* Vars */
+    const drawerWidth = windowWidth <= 500 ? '100%' : '70%';
+    const color = (theme === 'dark') ? '#0f172a' : '#f4f4f5';
     
     return (
       <Drawer
@@ -20,7 +26,7 @@ const SideDrawer = () => {
             flexShrink: 0,
             '& .MuiDrawer-paper': {
                 width: drawerWidth,
-                backgroundColor:'#f4f4f5',
+                backgroundColor: color,
             },
         }}
         variant="persistent"
