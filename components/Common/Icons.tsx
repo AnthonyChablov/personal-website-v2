@@ -3,20 +3,23 @@ import {DiCss3, DiSass, DiReact, DiNodejs, DiNpm, DiPython, DiMongodb} from 'rea
 import {HiDatabase} from "react-icons/hi";
 import {SiTypescript, SiJavascript, SiTailwindcss, SiFirebase, SiNextdotjs} from 'react-icons/si';
 import {TbExternalLink, TbSchool} from 'react-icons/tb';
+import {BsSunFill, BsFillMoonFill} from 'react-icons/bs';
 
 interface IIcons {
     type : string,
     size: number,
 }
 
-const Icons = ({type, size}:IIcons) => {
+const Icons = ({ type, size }:IIcons) => {
   return (
     <div className='text-slate-700'>{
         {
-          school: <TbSchool size={size}/>,
-          mongoDB: <DiMongodb size={size}/>,
-          next: <SiNextdotjs size={size}/>,
-          menu: <AiOutlineMenu size={size}/>,
+          moon : <BsFillMoonFill size={size}/> , 
+          sun : <BsSunFill size={size}/> ,
+          school: <TbSchool size={size}/> ,
+          mongoDB: <DiMongodb size={size}/> ,
+          next: <SiNextdotjs size={size}/> ,
+          menu: <AiOutlineMenu size={size}/> ,
           close: <AiOutlineClose size={size}/>,
           link : <TbExternalLink size={size}/>,
           twitter : <AiFillTwitterSquare size={size}/>,

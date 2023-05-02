@@ -5,7 +5,7 @@ export default function _document() {
     <Html lang='en' 
       className='scroll-smooth scrollbar-thin scrollbar-thumb-slate-600 scrollbar-track-slate-300 overflow-y-scroll'>
         <Head/>
-        <body >
+        <body className=''>
             <Main/>
             <NextScript/>
         </body>

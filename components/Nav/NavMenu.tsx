@@ -1,8 +1,10 @@
 import NavLink from "./NavLink";
 import Link from "next/link";
+import IconButton from "@mui/material/IconButton";
 import Button from "@mui/material/Button";
 import { useStateStore } from "../../store/useStore";
 import { motion } from "framer-motion";
+import Icons from "../Common/Icons";
 
 const navigationLinks= [
   {text: '01. About Me', linkTo: '#about'}, 
@@ -24,6 +26,7 @@ const listVariants ={
     }
   }
 }
+
 const navigationLinksVariants={
   hidden:{
     opacity: 0,
@@ -44,23 +47,41 @@ const NavMenu = () => {
 
   const toggleSideBar = useStateStore(state => state.toggleSideBar);
   const setToggleSideBar = useStateStore(state => state.setToggleSideBar);
+  const setTheme = useStateStore(state => state.setTheme);
+  const theme = useStateStore(state => state.theme);
 
-  function onClickHandeller(){
-    setToggleSideBar(!toggleSideBar)
+  function onClickToggleSidebar(){
+    setToggleSideBar(!toggleSideBar);
+  }
+
+  function onClickDarkModeToggle(){
+    setTheme(theme === 'dark' ? 'light' : 'dark');
   }
   
   return (
-    <div className="h-screen lg:h-0">
-      <motion.ul className={`flex items-center justify-between flex-col
-        lg:space-y-0 lg:space-x-9 lg:flex-row lg:items-center pt-40 lg:pt-0`}
+    <div className="h-screen lg:h-0 ">
+      
+      <motion.ul className={`pt-40 flex items-center justify-between flex-col
+        lg:space-y-0 lg:space-x-9 lg:flex-row lg:items-center lg:pt-0` }
         variants={listVariants}
         initial='hidden'
         animate='show'
       >
+        {/* Dark mode toggle */}
+        <IconButton onClick={ () => {
+          onClickDarkModeToggle();
+        }}> {
+          theme === 'light'
+            ? <Icons type="sun" size={25}/>
+            : <Icons type="moon" size={25}/>
+        }
+          
+        </IconButton>
         {
           navigationLinks.map((link, i)=>{
             return (
-              <motion.div key={i}
+              <motion.div 
+                key={i}
                 variants={navigationLinksVariants}
                 initial={'hidden'}
                 animate={{
@@ -95,7 +116,7 @@ const NavMenu = () => {
                 " 
               variant="contained"
               onClick={()=>{
-                onClickHandeller();
+                onClickToggleSidebar();
               }}
             >
               Get My CV
