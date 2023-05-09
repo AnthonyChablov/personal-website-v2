@@ -11,6 +11,9 @@ import Projects from "../components/Sections/Projects/Projects";
 import useWindowWidth from "../hooks/useWindowWidth";
 import { useStateStore } from "../store/useStore";
 
+import { StyledEngineProvider } from '@mui/material/styles';
+
+
 export default function Home() {
 
   /* State */
@@ -34,6 +37,7 @@ export default function Home() {
   }, [theme]);
 
   return (
+    
     <div className="dark:bg-black">
       <Head>
         <title key={'title'}>Anthony Chablov</title>
@@ -58,5 +62,6 @@ export default function Home() {
         )
       }
     </div>
+    
   );
 }
