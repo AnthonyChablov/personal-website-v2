@@ -1,6 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
+import Link from 'next/link';
 import { useStateStore } from '../../store/useStore'
 
 
@@ -8,8 +7,6 @@ interface INavLink {
     text: string,
     linkTo: string
 }
-
-
 
 const NavLink = ({text, linkTo}:INavLink) => {
 
@@ -29,4 +26,4 @@ const NavLink = ({text, linkTo}:INavLink) => {
   );
 }
 
-export default NavLink
+export default NavLink;
