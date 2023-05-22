@@ -17,6 +17,22 @@ export const heroImgVariants : Variants ={
         }
     }
 }
+
+export const heroImgMobileVariants : Variants ={
+    hidden:{
+        opacity: 0,
+        y: -15
+    },
+    visible:{
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5,
+            delay: 0.75,
+            ease: 'easeInOut'
+        }
+    }
+}
   
 export const heroSubHeaderVariants : Variants ={
     hidden:{
@@ -27,8 +43,24 @@ export const heroSubHeaderVariants : Variants ={
         opacity: 1,
         y: 0,
         transition: {
+            duration: 0.5,
+            delay: 1.5,
+            ease: 'easeInOut'
+        }
+    }
+}
+
+export const heroSubHeaderMobileVariants : Variants ={
+    hidden:{
+        opacity: 0,
+        y: -15
+    },
+    visible:{
+        opacity: 1,
+        y: 0,
+        transition: {
         duration: 0.5,
-        delay: 2,
+        delay: 1.25,
         ease: 'easeInOut'
         }
     }
@@ -45,6 +77,22 @@ export const heroHeaderVariants : Variants ={
         transition: {
         duration: 0.5,
         delay: 2.4,
+        ease: 'easeInOut'
+        }
+    }
+}
+
+export const heroHeaderMobileVariants : Variants ={
+    hidden:{
+        opacity: 0,
+        y: -15
+    },
+    visible:{
+        opacity: 1,
+        y: 0,
+        transition: {
+        duration: 0.5,
+        delay: 1.5,
         ease: 'easeInOut'
         }
     }

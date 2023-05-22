@@ -2,14 +2,29 @@ import Image from "next/image"
 import { motion } from "framer-motion";
 import profileImg from '../../assets/images/profileImg.jpg'
 import Button from '@mui/material/Button';
-import { heroImgVariants, heroSubHeaderVariants, heroHeaderVariants } from "../../variants";
+import useWindowWidth from "../../hooks/useWindowWidth";
+import { 
+  heroImgVariants, 
+  heroSubHeaderVariants, 
+  heroHeaderVariants, 
+  heroSubHeaderMobileVariants, 
+  heroHeaderMobileVariants, 
+  heroImgMobileVariants 
+} from "../../variants";
 import Link from "next/link";
 
 const Hero = () => {
+
+  const width = useWindowWidth();
+
   return (
     <div className="h-fit text-center mb-24 mt-4 ">
         <motion.div className="flex justify-center items-center"
-          variants={heroImgVariants}
+          variants={
+            width >= 1280 
+              ? heroImgVariants 
+              : heroImgMobileVariants
+          }
           initial="hidden"
           animate="visible"
         >
@@ -23,28 +38,44 @@ const Hero = () => {
             </div>
         </motion.div>
         <motion.p className="mt-14 uppercase font-light text-slate-700 text-md dark:text-slate-300"
-          variants={heroSubHeaderVariants}
+          variants={
+            width >= 1280 
+              ? heroSubHeaderVariants 
+              : heroSubHeaderMobileVariants
+          }
           initial="hidden"
           animate="visible"
         >
           Anthony Chablov
         </motion.p>
         <motion.h1 className="mt-9 text-4xl text-slate-800 font-medium dark:text-slate-200"
-          variants={heroHeaderVariants}
+          variants={
+            width >= 1280 
+              ? heroHeaderVariants 
+              : heroHeaderMobileVariants
+          }
           initial="hidden"
           animate="visible"
         >
           Frontend Web Developer
         </motion.h1>
         <motion.p className="mt-12 font-light text-slate-700 text-md dark:text-slate-300"
-          variants={heroHeaderVariants}
+          variants={
+            width >= 1280 
+              ? heroHeaderVariants 
+              : heroHeaderMobileVariants
+          }
           initial="hidden"
           animate="visible"
         >
           I have a passion for software. I enjoy creating tools that make life easier for people.
         </motion.p>
         <motion.div className=""
-          variants={heroHeaderVariants}
+          variants={
+            width >= 1280 
+              ? heroHeaderVariants 
+              : heroHeaderMobileVariants
+          }
           initial="hidden"
           animate="visible"
         >
