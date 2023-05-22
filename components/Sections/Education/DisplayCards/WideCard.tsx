@@ -42,8 +42,8 @@ const WideCard = ({icon, iconSize, title, description}:IWideCard) => {
       >
           <Icons type={icon} size={iconSize}/>
           <div className="w-full mt-4"> 
-              <p className="text-xl font-semibold text-slate-600 capitalize dark:text-slate-300">{title}</p>
-              <p className="mt-4 text-md font-medium text-slate-600 capitalize dark:text-slate-500">{description}</p>
+              <p className="text-xl font-semibold text-slate-600 capitalize dark:text-slate-300 h-fit">{title}</p>
+              <p className="mt-4 text-md font-medium text-slate-600 capitalize dark:text-slate-500 h-20">{description}</p>
           </div>
       </Button>
     </motion.div>
