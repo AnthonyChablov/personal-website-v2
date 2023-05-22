@@ -58,7 +58,7 @@ const Education = () => {
         }
       </div>
       {/* Education */}
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-11">
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-11">
         <WideCard 
           icon='school' 
           iconSize={40} 
