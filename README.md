@@ -1,23 +1,17 @@
-# ![WebApp](https://iharsh234.github.io/WebApp/images/demo/demo_landing.JPG)
-# WebApp
-<table>
-<tr>
-<td>
-  My personal portfolio website. 
-</td>
-</tr>
-</table>
+# ![Personal Portfolio Website](https://github.com/AnthonyChablov/personal-website-v2/assets/images/demo/demo_desktop.PNG)
+# My Personal Portfolio Website.
 
 ## Site
 ![](https://www.anthonychablov.com/)
 
 ## Mobile support
 This website is compatible with devices of all sizes and all OS's, and consistent improvements are being made.
+# ![Personal Portfolio Website](https://github.com/AnthonyChablov/personal-website-v2/assets/images/demo/demo_mobile.PNG)
 
 ### Development
-Want to contribute? Great!
+Want to contribute?
 
-To fix a bug or enhance an existing module, follow these steps:
+To fix a bug or enhance an existing feature, follow these steps:
 
 - Fork the repo
 - Create a new branch (`git checkout -b improve-feature`)
@@ -33,7 +27,6 @@ If you find a bug (the website couldn't handle the query and / or gave undesired
 
 If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/AnthonyChablov/personal-website-v2/issues). Please include sample queries and their corresponding results.
 
-
 ## Built with 
 
 - [Next.js](https://nextjs.org/) - Next.js is an open-source web development framework created by Vercel providing React-based web applications with server-side rendering and static website generation.
@@ -46,4 +39,4 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 
 ## [License](https://github.com/AnthonyChablov/LICENSE.md)
 
-MIT © [Harsh Vijay ](https://github.com/AnthonyChablov)
+MIT © [Anthony Chablov ](https://github.com/AnthonyChablov)
