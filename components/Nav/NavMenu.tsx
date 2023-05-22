@@ -63,7 +63,8 @@ const NavMenu = () => {
     <div className="h-screen lg:h-0 ">
       
       <motion.ul className={`pt-40 flex items-center justify-between flex-col
-        lg:space-y-0 lg:space-x-9 lg:flex-row lg:items-center lg:pt-0 lg:mt-2` }
+          lg:space-y-0 lg:space-x-9 lg:flex-row lg:items-center lg:pt-0 lg:mt-2` 
+        }
         variants={listVariants}
         initial='hidden'
         animate='show'
@@ -114,9 +115,8 @@ const NavMenu = () => {
             <Button 
               className="text-xl px-8 py-3 bg-white text-slate-700 font-medium 
                 capitalize  hover:bg-slate-700 hover:text-slate-100 
-                rounded-md shadow-md 
-                lg:text-sm
-                " 
+                rounded-md shadow-md lg:text-sm 
+                dark:bg-slate-600 dark:text-slate-300 dark:hover:bg-slate-400 dark:hover:text-slate-700" 
               variant="contained"
               onClick={()=>{
                 onClickToggleSidebar();

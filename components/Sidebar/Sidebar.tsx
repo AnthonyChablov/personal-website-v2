@@ -46,9 +46,9 @@ const Sidebar = ({anchor, mode}:ISideBar) => {
                             }
                         </>
                     ) : (
-                        <div className="rotate-90 mb-16">
+                        <div className="rotate-90 mb-16 ">
                             <Button 
-                                className="text-sm lowercase text-zinc-700 dark:text-slate-300"
+                                className="text-sm lowercase text-zinc-700 dark:text-slate-300 "
                                 variant='text'
                             >
                                 <a href="mailto: aechablov@gmail.com  ">

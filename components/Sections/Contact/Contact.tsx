@@ -34,9 +34,9 @@ const Contact = () => {
           viewport={{ once: true }}
         >
           <Link href="mailto: aechablov@gmail.com"> 
-          <Button className='mt-12 px-8 py-3 bg-slate-700 text-slate-100 font-medium 
-              capitalize  hover:bg-slate-100 hover:text-slate-700 text-md 
-              rounded-md shadow-md'
+          <Button className='mt-12 px-8 py-3 bg-slate-700 text-slate-100 text-[1rem]  font-thin 
+              capitalize  hover:bg-slate-100 hover:text-slate-700 
+              rounded-md shadow-md dark:bg-slate-600 dark:text-slate-300 dark:hover:bg-slate-400 dark:hover:text-slate-700'
           >
             <p>
               Say Hello
