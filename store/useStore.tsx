@@ -15,7 +15,7 @@ type Action={
 export const useStateStore = create<State & Action>((set)=>({
     toggleSideBar: false,
     windowWidth: 0,
-    theme: 'light',
+    theme: 'dark',
     setTheme: ( newTheme : string ) => set({ theme : newTheme }),
     setToggleSideBar: ( newToggleSideBar : boolean ) => set({ toggleSideBar : newToggleSideBar }),
     setWindowWidth: ( newWindowWidth : number ) => set({ windowWidth : newWindowWidth})

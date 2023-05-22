@@ -4,6 +4,8 @@ import {HiDatabase} from "react-icons/hi";
 import {SiTypescript, SiJavascript, SiTailwindcss, SiFirebase, SiNextdotjs} from 'react-icons/si';
 import {TbExternalLink, TbSchool} from 'react-icons/tb';
 import {BsSunFill, BsFillMoonFill} from 'react-icons/bs';
+import {MdOutlineSchool} from 'react-icons/md';
+
 import { useStateStore } from '../../store/useStore';
 
 interface IIcons {
@@ -21,7 +23,7 @@ const Icons = ({ type, size }:IIcons) => {
         {
           moon : <BsFillMoonFill size={size} color={color} /> , 
           sun : <BsSunFill size={size} color={color}/> ,
-          school: <TbSchool size={size} color={color}/> ,
+          school: <MdOutlineSchool size={size} color={color}/> ,
           mongoDB: <DiMongodb size={size} color={color}/> ,
           next: <SiNextdotjs size={size} color={color}/> ,
           menu: <AiOutlineMenu size={size} color={color}/> ,

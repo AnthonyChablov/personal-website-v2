@@ -35,11 +35,26 @@ const Education = () => {
         enable me to create beautiful and functional websites and web applications. 
         <br></br>
         <br></br>
-        Some of my key skills include:
+        My key skills and education include:
       </p>
+      {/* Education */}
+      <div className="mt-16 grid grid-cols-2 gap-11">
+        <WideCard 
+          icon='school' 
+          iconSize={40} 
+          title='University Of Waterloo' 
+          description={'Faculty Of Environment - Honours Bachelors Geography and Environmental Management'}/>
+        <WideCard 
+          icon='school' 
+          iconSize={40} 
+          title='Seneca College' 
+          description={'Faculty of Software Development - Computer Programming and Analysis'}/>
+      </div>
+      {/* Skills */}
       <div className='text-left mx-auto grid grid-cols-2 grid-rows-3 gap-11
-        sm:grid-cols-3 md:grid-cols-4 mt-20 '
+        sm:grid-cols-3 md:grid-cols-4 mt-10'
       >
+        
         {
           skills.map((skill, i) => {
             return (
