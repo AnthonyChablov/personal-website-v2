@@ -40,7 +40,7 @@ const Education = () => {
       
       {/* Skills */}
       <div className='text-left mx-auto grid grid-cols-2 grid-rows-3 gap-11
-        sm:grid-cols-3 md:grid-cols-4 mt-10'
+        sm:grid-cols-3 md:grid-cols-4 mt-16'
       >
         
         {
