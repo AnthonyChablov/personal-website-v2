@@ -11,9 +11,6 @@ import Projects from "../components/Sections/Projects/Projects";
 import useWindowWidth from "../hooks/useWindowWidth";
 import { useStateStore } from "../store/useStore";
 
-import { StyledEngineProvider } from '@mui/material/styles';
-
-
 export default function Home() {
 
   /* State */

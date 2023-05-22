@@ -23,7 +23,7 @@ const WideCard = ({icon, iconSize, title, description}:IWideCard) => {
         x:0,
         transition: {
         duration: 0.5,
-        delay: 0.1 ,
+        delay: 1.5 ,
         ease: 'easeInOut'
         }
     }
