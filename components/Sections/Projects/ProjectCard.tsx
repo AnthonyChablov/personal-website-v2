@@ -41,7 +41,6 @@ const ProjectCard = ({subheader, id, header, paragraph, madewith, github, link, 
     }
   }
 
-
   return (
     <motion.div className='flex mt-4'
       variants={projectCardVariants}
