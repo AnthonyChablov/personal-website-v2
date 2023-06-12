@@ -31,8 +31,8 @@ const Projects = () => {
       header: 'Personal Portfolio Website',
       paragraph: 'A fully-responsive, mobile-friendly, SEO-friendly portfolio website with darkmode toggle functionality and scroll-down animations.',
       madeWith : 'Next.js, TypeScript, Tailwind CSS, Material UI, Framer-Motion, Zustand',
-      github: 'https://en.wikipedia.org/wiki/Next.js',
-      link: 'https://en.wikipedia.org/wiki/Next.js',
+      github: 'https://github.com/AnthonyChablov/personal-website-v2',
+      link: 'https://www.anthonychablov.com/',
       img: personalWebsite
     },
     {
