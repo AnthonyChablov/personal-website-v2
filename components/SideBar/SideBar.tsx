@@ -14,7 +14,7 @@ interface ISideBar {
 const linkData = [
     {icon :'github', link: 'https://github.com/AnthonyChablov'},
     {icon :'linkedin', link: 'https://www.linkedin.com/in/anthonychablov/'},
-    {icon :'twitter', link: 'https://github.com/AnthonyChablov'}
+    {icon :'leetcode', link: 'https://leetcode.com/AnthonyChablov/'}
 ];
 
 const iconSize = 25;

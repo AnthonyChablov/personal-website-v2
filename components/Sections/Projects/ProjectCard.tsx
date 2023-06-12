@@ -1,9 +1,10 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import Icons from '../../Common/Icons';
 import Button from "@mui/material/Button";
 import Link from 'next/link';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import placeholder from '../../../assets/images/placeholder.png';
 import useWindowWidth from '../../../hooks/useWindowWidth';
 
@@ -15,10 +16,10 @@ interface IProjectCard {
   madewith: string,
   github: string,
   link: string,
-
+  img?: StaticImageData, 
 }
 
-const ProjectCard = ({subheader, id, header, paragraph, madewith, github, link} : IProjectCard) => {
+const ProjectCard = ({subheader, id, header, paragraph, madewith, github, link, img} : IProjectCard) => {
 
   const windowWidth = useWindowWidth();
 
@@ -49,7 +50,7 @@ const ProjectCard = ({subheader, id, header, paragraph, madewith, github, link} 
       viewport={{ once: true }}
     >
       <Button 
-        className="w-full py-10 px-10 bg-slate-200 hover:bg-slate-300 mx-auto h-fit shadow-md dark:bg-slate-900 "
+        className="w-full py-10 px-10 bg-slate-200 hover:bg-slate-300 mx-auto h-fit shadow-md dark:bg-slate-900 cursor-auto"
         variant='outlined'
       >
         <div className={` w-full flex 
@@ -63,16 +64,20 @@ const ProjectCard = ({subheader, id, header, paragraph, madewith, github, link} 
               } 
             `}
           >
-            <p>{subheader}</p>
-            <h1 className='text-3xl pt-3'>{header}</h1>
-            <div className={` w-full flex 
-              ${id % 2 === 1 && 'justify-end '} `
-            }>
-              <p className='normal-case mt-7 font-regular max-w-md'>
-                {paragraph}
-              </p>
-            </div>
-            <p className='mt-7 mb-5'>{madewith}</p>
+            {/* Content */}
+            <Link  href={link} target="_blank">
+              <p>{subheader}</p>
+              <h1 className='text-3xl pt-3'>{header}</h1>
+              <div className={` w-full flex 
+                ${id % 2 === 1 && 'justify-end '} `
+              }>
+                <p className='normal-case mt-7 font-regular max-w-md'>
+                  {paragraph}
+                </p>
+              </div>
+              <p className='mt-7 mb-5'>{madewith}</p>
+            </Link>
+            {/* Links */}
             <div className={`pt-3 pb-3 flex space-x-5 
               ${id % 2 === 1 && 'justify-end '}`
             }>
@@ -85,25 +90,27 @@ const ProjectCard = ({subheader, id, header, paragraph, madewith, github, link} 
             </div>
           </div>
           {/* image  */}
-          <div className="collapse sm:visible">
-            <div className={
-              `flex items-center mt-9 shadow-md`}
-            >
-              <div className="rounded-md overflow-hidden hue-rotate-0 sm:h-fit 
-              bg-gray-900 opacity-75 blur-xs"
+          <Link  href={link} target="_blank">
+            <div className="collapse sm:visible">
+              <div className={
+                `flex items-center mt-9 shadow-md`}
               >
-                {
-                  windowWidth > 768 &&
-                    <Image
-                      src={placeholder}
-                      alt='project image'
-                      width={775}
-                      height={700}
-                    />
-                }
+                <div className="rounded-md overflow-hidden hue-rotate-0 sm:h-fit 
+                bg-gray-900 opacity-75 blur-xs"
+                >
+                  {
+                    windowWidth > 768 &&
+                      <Image
+                        src={img}
+                        alt='project image'
+                        width={775}
+                        height={700}
+                      />
+                  }
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </Button>
     </motion.div>

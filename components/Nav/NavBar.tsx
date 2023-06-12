@@ -1,8 +1,10 @@
 import {useState, useEffect, useRef} from 'react';
 import Link from "next/link";
 import IconButton from "@mui/material/IconButton";
+import Button from "@mui/material/Button";
 import Image from "next/image";
 import logo from '../../assets/images/navbar-logo.png';
+import newLogo from '../../assets/images/logoNew.png';
 import SideDrawer from '../SideDrawer/SideDrawer';
 import NavMenu from './NavMenu';
 import useWindowWidth from '../../hooks/useWindowWidth';
@@ -94,7 +96,7 @@ const NavBar = () => {
 
   return (
     <>
-      <motion.nav className={` px-4 py-3 lg:px-20 mx-auto flex justify-between 
+      <motion.nav className={` px-4 py-3 lg:px-10 xl:px-20 mx-auto flex justify-between 
         items-center lg:items-baseline sticky top-0 z-50 dark:bg-slate-900 
         ${!show && 'hidden'}
         ${color && 'backdrop-blur bg-zinc-100/90 shadow-2xl '}`}
@@ -114,14 +116,10 @@ const NavBar = () => {
           }}
         >
           <Link href="/">
-            <IconButton>
-              <Image className='dark:invert dark:hue-rotate-180'
-                src={logo} 
-                alt='logo' 
-                width={62}
-                height={0}
-              ></Image>
-            </IconButton>
+            <p className='text-slate-700 font-semibold text-sm sm:text-lg xl:text-lg h-14 flex items-center justify-center
+              dark:text-slate-200 hover:text-slate-500 dark:hover:text-slate-400 '
+            >Anthony Chablov
+            </p>
           </Link>
         </motion.div>
         {

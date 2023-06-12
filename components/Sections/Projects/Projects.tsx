@@ -2,17 +2,20 @@ import Header from '../../Common/Header';
 import ProjectCard from './ProjectCard';
 import { motion } from 'framer-motion';
 import { sectionHeaderVariants } from '../../../variants';
+import soundScopeImg from '../../../assets/images/projects/sound-scope/soundScope.png';
+import personalWebsite from '../../../assets/images/projects/personal-website/personalWebsite.png';
 
 const Projects = () => {
 
   const projectData = [
     {
       project:'Featured Project',
-      header: 'Project 1',
-      paragraph: 'A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.',
-      madeWith : 'VS Code, Sublime Text Atom, iTerm2, Hyper',
-      github: 'https://en.wikipedia.org/wiki/Next.js',
-      link: 'https://en.wikipedia.org/wiki/Next.js'
+      header: 'Sound-Scope',
+      paragraph: 'A Spotify Profile Viewer that allows users to view their top tracks, artists, recently played songs, and playlists. The app can suggest songs based on existing playlists and can create new playlists accordingly within the users account.',
+      madeWith : 'Next.js, TypeScript, Tailwind CSS, Material UI, Framer-Motion, Zustand',
+      github: 'https://github.com/AnthonyChablov/sound-scope',
+      link: 'https://sound-scope-anthonychablov.vercel.app/',
+      img: soundScopeImg
     },
     {
       project:'Featured Project',
@@ -20,15 +23,17 @@ const Projects = () => {
       paragraph: 'A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.',
       madeWith : 'VS Code, Sublime Text Atom, iTerm2, Hyper',
       github: 'https://en.wikipedia.org/wiki/Next.js',
-      link: 'https://en.wikipedia.org/wiki/Next.js'
+      link: 'https://en.wikipedia.org/wiki/Next.js',
+      img: soundScopeImg
     },
     {
       project:'Featured Project',
-      header: 'Project 3',
-      paragraph: 'A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.',
-      madeWith : 'VS Code, Sublime Text Atom, iTerm2, Hyper',
+      header: 'Personal Portfolio Website',
+      paragraph: 'A fully-responsive, mobile-friendly, SEO-friendly portfolio website with darkmode toggle functionality and scroll-down animations.',
+      madeWith : 'Next.js, Tailwind CSS, Material UI, Framer-Motion, Zustand',
       github: 'https://en.wikipedia.org/wiki/Next.js',
-      link: 'https://en.wikipedia.org/wiki/Next.js'
+      link: 'https://en.wikipedia.org/wiki/Next.js',
+      img: personalWebsite
     },
     {
       project:'Featured Project',
@@ -36,7 +41,8 @@ const Projects = () => {
       paragraph: 'A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.',
       madeWith : 'VS Code, Sublime Text Atom, iTerm2, Hyper',
       github: 'https://en.wikipedia.org/wiki/Next.js',
-      link: 'https://en.wikipedia.org/wiki/Next.js'
+      link: 'https://en.wikipedia.org/wiki/Next.js',
+      img: soundScopeImg
     }
   ];
 
@@ -58,6 +64,7 @@ const Projects = () => {
                   madewith={elem.madeWith}
                   github={elem.github}
                   link={elem.link}
+                  img={elem.img}
                 />
               )
             })

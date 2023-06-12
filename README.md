@@ -1,4 +1,4 @@
-# ![Personal Portfolio Website](https://github.com/AnthonyChablov/personal-website-v2/assets/images/demo/demo_desktop.PNG)
+# ![Personal Portfolio Website](https://www.anthonychablov.com/)
 # My Personal Portfolio Website.
 
 ## Site
@@ -6,7 +6,7 @@
 
 ## Mobile support
 This website is compatible with devices of all sizes and all OS's, and consistent improvements are being made.
-# ![Personal Portfolio Website](https://github.com/AnthonyChablov/personal-website-v2/assets/images/demo/demo_mobile.PNG)
+# ![desktop view](https://github.com/AnthonyChablov/personal-website-v2/assets/images/demo/demo_mobile.PNG)
 
 ### Development
 Want to contribute?

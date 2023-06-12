@@ -1,7 +1,7 @@
 import {AiFillHtml5, AiFillGithub, AiFillLinkedin, AiFillTwitterSquare, AiOutlineClose, AiOutlineMenu} from 'react-icons/ai';
 import {DiCss3, DiSass, DiReact, DiNodejs, DiNpm, DiPython, DiMongodb} from 'react-icons/di';
 import {HiDatabase} from "react-icons/hi";
-import {SiTypescript, SiJavascript, SiTailwindcss, SiFirebase, SiNextdotjs} from 'react-icons/si';
+import {SiTypescript, SiJavascript, SiTailwindcss, SiFirebase, SiNextdotjs, SiLeetcode} from 'react-icons/si';
 import {TbExternalLink, TbSchool} from 'react-icons/tb';
 import {BsSunFill, BsFillMoonFill} from 'react-icons/bs';
 import {MdOutlineSchool} from 'react-icons/md';
@@ -44,6 +44,7 @@ const Icons = ({ type, size }:IIcons) => {
           tailwind: <SiTailwindcss size={size} color={color}/>,
           firebase: <SiFirebase size={size} color={color}/>,
           typescript: <SiTypescript size={size} color={color}/>,
+          leetcode : <SiLeetcode size={size} color={color}/>
         }[type]
     }</div>
   )
