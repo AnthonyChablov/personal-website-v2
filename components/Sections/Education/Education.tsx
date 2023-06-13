@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import gsap from 'gsap';
 import Divider from '@mui/material/Divider';
 import Header from '../../Common/Header';
 import SingleCard from './DisplayCards/SingleCard';
