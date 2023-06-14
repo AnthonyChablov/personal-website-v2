@@ -1,5 +1,5 @@
 import Button from "@mui/material/Button";
-import { IconButton } from "@mui/material";
+import  IconButton  from "@mui/material/IconButton";
 import Icons from "../Common/Icons";
 import Link from "next/link";
 

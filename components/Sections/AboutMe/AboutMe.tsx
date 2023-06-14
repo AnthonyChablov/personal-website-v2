@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Header from '../../Common/Header';
-import { sectionHeaderVariants , sectionContentVariants} from '../../../variants';
+import {  sectionContentVariants} from '../../../variants';
 
 const AboutMe = () => {
 
@@ -21,7 +21,7 @@ const AboutMe = () => {
                 <Header title={'01. About Me'}/>
             </div>
             
-            <motion.div className='text-left text-md font-light text-slate-600 dark:text-slate-300'
+            <m.div className='text-left text-md font-light text-slate-600 dark:text-slate-300'
               variants={sectionContentVariants}
               initial="hidden"
               whileInView={'visible'}
@@ -37,7 +37,7 @@ const AboutMe = () => {
                 })
               }
               <p></p>
-            </motion.div>
+            </m.div>
         </div>
     </section>
   )

@@ -1,16 +1,12 @@
-import {useState, useEffect, useRef} from 'react';
+import {useState, useEffect} from 'react';
+import dynamic from 'next/dynamic';
 import Link from "next/link";
 import IconButton from "@mui/material/IconButton";
-import Button from "@mui/material/Button";
-import Image from "next/image";
-import logo from '../../assets/images/navbar-logo.png';
-import newLogo from '../../assets/images/logoNew.png';
-import SideDrawer from '../SideDrawer/SideDrawer';
 import NavMenu from './NavMenu';
 import useWindowWidth from '../../hooks/useWindowWidth';
 import Icons from '../Common/Icons';
 import { useStateStore } from '../../store/useStore';
-import {  motion, useMotionValue, useScroll, useTransform, useMotionTemplate } from "framer-motion";
+import {  m, useMotionValue, useScroll, useTransform } from "framer-motion";
 
 /* Framer motion animations */
 const navigationLinksVariants={
@@ -43,6 +39,9 @@ const NavBar = () => {
 
   /* Detect Window width resize */
   const windowWidth = useWindowWidth();
+
+  /* Dynamic imports */
+  const SideDrawer = dynamic(() => import('../SideDrawer/SideDrawer'));
 
   useEffect(()=>{
 
@@ -96,14 +95,14 @@ const NavBar = () => {
 
   return (
     <>
-      <motion.nav className={` px-4 py-3 lg:px-10 xl:px-20 mx-auto flex justify-between 
+      <m.nav className={` px-4 py-3 lg:px-10 xl:px-20 mx-auto flex justify-between 
         items-center lg:items-baseline sticky top-0 z-50 dark:bg-slate-900 
         ${!show && 'hidden'}
         ${color && 'backdrop-blur bg-zinc-100/90 shadow-2xl '}`}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
-        <motion.div
+        <m.div
           variants={navigationLinksVariants}
           initial={'hidden'}
           animate={'visible'}
@@ -121,7 +120,7 @@ const NavBar = () => {
             >Anthony Chablov
             </p>
           </Link>
-        </motion.div>
+        </m.div>
         {
           ( windowWidth >= 1023 ) 
             ? (<NavMenu/>) 
@@ -134,7 +133,7 @@ const NavBar = () => {
                 </IconButton>
               )
         }
-      </motion.nav>
+      </m.nav>
       { ( windowWidth <= 1023 ) && <SideDrawer /> }
     </>
   )

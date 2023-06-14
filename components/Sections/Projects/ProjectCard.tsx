@@ -1,11 +1,8 @@
-
-import React from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Icons from '../../Common/Icons';
 import Button from "@mui/material/Button";
 import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
-import placeholder from '../../../assets/images/placeholder.png';
 import useWindowWidth from '../../../hooks/useWindowWidth';
 
 interface IProjectCard {
@@ -42,7 +39,7 @@ const ProjectCard = ({subheader, id, header, paragraph, madewith, github, link, 
   }
 
   return (
-    <motion.div className='flex mt-4'
+    <m.div className='flex mt-4'
       variants={projectCardVariants}
       initial={'hidden'}
       whileInView={'visible'}
@@ -112,7 +109,7 @@ const ProjectCard = ({subheader, id, header, paragraph, madewith, github, link, 
           </Link>
         </div>
       </Button>
-    </motion.div>
+    </m.div>
   )
 }
 

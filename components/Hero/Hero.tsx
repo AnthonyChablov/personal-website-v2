@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import profileImg from '../../assets/images/profileImg.jpg'
 import Button from '@mui/material/Button';
 import useWindowWidth from "../../hooks/useWindowWidth";
@@ -19,7 +19,7 @@ const Hero = () => {
 
   return (
     <div className="h-fit text-center mb-24 mt-4 ">
-        <motion.div className="flex justify-center items-center"
+        <m.div className="flex justify-center items-center"
           variants={
             width >= 1280 
               ? heroImgVariants 
@@ -36,8 +36,8 @@ const Hero = () => {
                     alt="anthony-img"
                 ></Image>
             </div>
-        </motion.div>
-        <motion.p className="mt-14 uppercase font-light text-slate-700 text-md dark:text-slate-300"
+        </m.div>
+        <m.p className="mt-14 uppercase font-light text-slate-700 text-md dark:text-slate-300"
           variants={
             width >= 1280 
               ? heroSubHeaderVariants 
@@ -47,8 +47,8 @@ const Hero = () => {
           animate="visible"
         >
           Anthony Chablov
-        </motion.p>
-        <motion.h1 className="mt-9 text-4xl text-slate-800 font-medium dark:text-slate-200"
+        </m.p>
+        <m.h1 className="mt-9 text-4xl text-slate-800 font-medium dark:text-slate-200"
           variants={
             width >= 1280 
               ? heroHeaderVariants 
@@ -58,8 +58,8 @@ const Hero = () => {
           animate="visible"
         >
           Frontend Web Developer
-        </motion.h1>
-        <motion.p className="mt-12 font-light text-slate-700 text-md dark:text-slate-300"
+        </m.h1>
+        <m.p className="mt-12 font-light text-slate-700 text-md dark:text-slate-300"
           variants={
             width >= 1280 
               ? heroHeaderVariants 
@@ -69,8 +69,8 @@ const Hero = () => {
           animate="visible"
         >
           I have a passion for software. I enjoy creating tools that make life easier for people.
-        </motion.p>
-        <motion.div className=""
+        </m.p>
+        <m.div className=""
           variants={
             width >= 1280 
               ? heroHeaderVariants 
@@ -89,7 +89,7 @@ const Hero = () => {
               <p> Contact Me </p>
             </Button>
           </Link>
-        </motion.div>
+        </m.div>
     </div>
   );
 }

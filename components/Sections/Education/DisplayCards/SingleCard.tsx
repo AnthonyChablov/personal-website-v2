@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { m } from "framer-motion"
 import Icons from "../../../Common/Icons"
 import Button from "@mui/material/Button"
 
@@ -30,7 +30,7 @@ const DisplayCard = ({id, icon, iconSize, }:IDisplayCard) => {
   }
 
   return (
-    <motion.div
+    <m.div
       variants={skillCardVariants}
       initial={'hidden'}
       whileInView={'visible'}
@@ -46,7 +46,7 @@ const DisplayCard = ({id, icon, iconSize, }:IDisplayCard) => {
               <p className="text-md text-slate-600 capitalize dark:text-slate-300">{icon}</p>
           </div>
       </Button>
-    </motion.div>
+    </m.div>
   )
 }
 

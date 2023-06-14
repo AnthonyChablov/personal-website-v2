@@ -1,8 +1,8 @@
 import Head from "next/head";
 import { useEffect } from "react";
+import dynamic from 'next/dynamic';
 import NavBar from "../components/Nav/NavBar";
 import Hero from "../components/Hero/Hero";
-import Sidebar from "../components/SideBar/SideBar";
 import Contact from "../components/Sections/Contact/Contact";
 import Footer from "../components/Footer/Footer";
 import AboutMe from "../components/Sections/AboutMe/AboutMe";
@@ -10,6 +10,7 @@ import Education from "../components/Sections/Education/Education";
 import Projects from "../components/Sections/Projects/Projects";
 import useWindowWidth from "../hooks/useWindowWidth";
 import { useStateStore } from "../store/useStore";
+import {LazyMotion, domAnimation} from 'framer-motion';
 
 export default function Home() {
 
@@ -18,6 +19,9 @@ export default function Home() {
   const setTheme = useStateStore(state => state.setTheme);
   /* Hooks */
   const windowWidth = useWindowWidth();
+
+  /* Dynamic imports */
+  const Sidebar = dynamic(() => import("../components/SideBar/SideBar"));
 
   useEffect(() => {
 
@@ -34,7 +38,7 @@ export default function Home() {
   }, [theme]);
 
   return (
-    
+    <LazyMotion features={domAnimation}>
     <div className="dark:bg-black">
       <Head>
         <title key={'title'}>Anthony Chablov</title>
@@ -59,6 +63,6 @@ export default function Home() {
         )
       }
     </div>
-    
+    </LazyMotion>
   );
 }

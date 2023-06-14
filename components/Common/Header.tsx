@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Divider from '@mui/material/Divider';
 import { sectionHeaderVariants } from '../../variants';
 
@@ -8,7 +8,7 @@ interface IHeader{
 
 const Header = ({title} : IHeader) => {
   return (
-    <motion.div className='w-full pt-16'
+    <m.div className='w-full pt-16'
       variants={sectionHeaderVariants}
       initial={'hidden'}
       whileInView={'visible'}
@@ -16,7 +16,7 @@ const Header = ({title} : IHeader) => {
     >
         <h1 className='text-2xl text-left text-zinc-700 font-normal mb-5 dark:text-slate-200'>{title}</h1>
         <Divider className=" bg-zinc-300 mb-12" />
-    </motion.div>
+    </m.div>
   )
 }
 

@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import Divider from '@mui/material/Divider';
 import Header from '../../Common/Header';
 import SingleCard from './DisplayCards/SingleCard';
 import WideCard from './DisplayCards/WideCard';

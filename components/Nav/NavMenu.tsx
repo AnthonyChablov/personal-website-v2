@@ -3,7 +3,7 @@ import Link from "next/link";
 import IconButton from "@mui/material/IconButton";
 import Button from "@mui/material/Button";
 import { useStateStore } from "../../store/useStore";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Icons from "../Common/Icons";
 
 const navigationLinks= [
@@ -62,7 +62,7 @@ const NavMenu = () => {
   return (
     <div className="h-screen lg:h-0 ">
       
-      <motion.ul className={`pt-40 flex items-center justify-between flex-col
+      <m.ul className={`pt-40 flex items-center justify-between flex-col
           lg:space-y-0 lg:space-x-9 lg:flex-row lg:items-center lg:pt-0 lg:mt-2` 
         }
         variants={listVariants}
@@ -84,7 +84,7 @@ const NavMenu = () => {
         {
           navigationLinks.map((link, i)=>{
             return (
-              <motion.div 
+              <m.div 
                 key={i}
                 variants={navigationLinksVariants}
                 initial={'hidden'}
@@ -102,11 +102,11 @@ const NavMenu = () => {
                   text={link.text} 
                   linkTo={link.linkTo}
                 />
-              </motion.div>
+              </m.div>
             );
           })
         }
-        <motion.li
+        <m.li
           variants={navigationLinksVariants}
           initial={'hidden'}
           animate={'visible'}
@@ -125,8 +125,8 @@ const NavMenu = () => {
               Get My CV
             </Button>
           </Link>
-        </motion.li>
-      </motion.ul>
+        </m.li>
+      </m.ul>
     </div>
   )
 }

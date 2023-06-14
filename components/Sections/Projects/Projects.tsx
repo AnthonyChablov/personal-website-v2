@@ -1,7 +1,5 @@
 import Header from '../../Common/Header';
 import ProjectCard from './ProjectCard';
-import { motion } from 'framer-motion';
-import { sectionHeaderVariants } from '../../../variants';
 import soundScopeImg from '../../../assets/images/projects/sound-scope/soundScope.png';
 import personalWebsite from '../../../assets/images/projects/personal-website/personalWebsite.png';
 

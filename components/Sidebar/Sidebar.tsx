@@ -1,5 +1,5 @@
 import IconButton from "@mui/material/IconButton";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Icons from "../Common/Icons";
 import VerticalDivider from "../Common/VerticalDivider";
 import Button from "@mui/material/Button";
@@ -22,7 +22,7 @@ const iconSize = 25;
 const Sidebar = ({anchor, mode}:ISideBar) => {
 
     return (
-        <motion.div className={`fixed bottom-0 h-fit 
+        <m.div className={`fixed bottom-0 h-fit 
             ${(anchor === 'left') && 'left-20'} 
             ${(anchor === 'right') && 'right-0'}`}
             variants={sidebarVariants}    
@@ -60,7 +60,7 @@ const Sidebar = ({anchor, mode}:ISideBar) => {
                 }
             </div>
             <VerticalDivider/>
-        </motion.div>
+        </m.div>
     )
 }
 
