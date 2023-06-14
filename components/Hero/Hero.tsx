@@ -34,6 +34,7 @@ const Hero = () => {
                     height={100}
                     width={250}
                     alt="anthony-img"
+                    priority={true}
                 ></Image>
             </div>
         </m.div>
@@ -81,7 +82,7 @@ const Hero = () => {
         >
           <Link href="mailto: aechablov@gmail.com">
             <Button 
-              className="mt-12 px-7 py-4 bg-slate-600 text-slate-300 hover:bg-white
+              className="mt-12 px-7 py-4 bg-slate-700 text-slate-100 hover:bg-white
                 capitalize  dark:hover:bg-slate-400 hover:text-slate-700 text-[1rem] font-thin
                 rounded-md shadow-md" 
               variant="contained"
