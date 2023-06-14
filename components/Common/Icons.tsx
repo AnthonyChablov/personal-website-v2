@@ -2,7 +2,7 @@ import {AiFillHtml5, AiFillGithub, AiFillLinkedin, AiFillTwitterSquare, AiOutlin
 import {DiCss3, DiSass, DiReact, DiNodejs, DiNpm, DiPython, DiMongodb} from 'react-icons/di';
 import {HiDatabase} from "react-icons/hi";
 import {SiTypescript, SiJavascript, SiTailwindcss, SiFirebase, SiNextdotjs, SiLeetcode} from 'react-icons/si';
-import {TbExternalLink, TbSchool} from 'react-icons/tb';
+import {TbExternalLink} from 'react-icons/tb';
 import {BsSunFill, BsFillMoonFill} from 'react-icons/bs';
 import {MdOutlineSchool} from 'react-icons/md';
 
