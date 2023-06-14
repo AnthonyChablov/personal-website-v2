@@ -21,13 +21,14 @@ const iconSize = 25;
 
 const Sidebar = ({anchor, mode}:ISideBar) => {
 
-    return (
+    return (    
         <m.div className={`fixed bottom-0 h-fit 
             ${(anchor === 'left') && 'left-20'} 
             ${(anchor === 'right') && 'right-0'}`}
             variants={sidebarVariants}    
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
         >
             <div className="flex flex-col items-center justify-center ">
                 {(mode === 'icons') 
