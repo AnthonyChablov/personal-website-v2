@@ -7,6 +7,7 @@ import useWindowWidth from '../../hooks/useWindowWidth';
 import Icons from '../Common/Icons';
 import { useStateStore } from '../../store/useStore';
 import {  m, useMotionValue, useScroll, useTransform } from "framer-motion";
+import SideDrawer from '../SideDrawer/SideDrawer';
 
 /* Framer motion animations */
 const navigationLinksVariants={
@@ -40,9 +41,7 @@ const NavBar = () => {
   /* Detect Window width resize */
   const windowWidth = useWindowWidth();
 
-  /* Dynamic imports */
-  const SideDrawer = dynamic(() => import('../SideDrawer/SideDrawer'));
-
+  
   useEffect(()=>{
 
     function changeColor(){

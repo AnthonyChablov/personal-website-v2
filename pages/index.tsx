@@ -53,7 +53,6 @@ export default function Home() {
                 <Footer/>
               </div>
             </div>
-          <AnimatePresence initial={false}>
           {
             windowWidth >= 1280 && (
               <>
@@ -62,7 +61,6 @@ export default function Home() {
               </>
             )
           }
-          </AnimatePresence>
         </div>
       </LazyMotion>
     </>
