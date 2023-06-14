@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { useEffect } from "react";
-import dynamic from 'next/dynamic';
 import NavBar from "../components/Nav/NavBar";
 import Hero from "../components/Hero/Hero";
 import Contact from "../components/Sections/Contact/Contact";
