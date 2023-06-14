@@ -11,7 +11,7 @@ import useWindowWidth from "../hooks/useWindowWidth";
 import { useStateStore } from "../store/useStore";
 import {LazyMotion, domAnimation} from 'framer-motion';
 import { AnimatePresence } from "framer-motion";
-import Sidebar from "../components/SideBar/Sidebar";
+import Sidebar from "../components/Sidebar/Sidebar";
 
 export default function Home() {
 
