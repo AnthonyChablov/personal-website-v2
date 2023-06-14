@@ -12,6 +12,7 @@ import useWindowWidth from "../hooks/useWindowWidth";
 import { useStateStore } from "../store/useStore";
 import {LazyMotion, domAnimation} from 'framer-motion';
 import { AnimatePresence } from "framer-motion";
+import Sidebar from "../components/SideBar/Sidebar";
 
 export default function Home() {
 
@@ -20,9 +21,6 @@ export default function Home() {
   const setTheme = useStateStore(state => state.setTheme);
   /* Hooks */
   const windowWidth = useWindowWidth();
-
-  /* Dynamic imports */
-  const Sidebar = dynamic(() => import("../components/SideBar/SideBar"));
 
   useEffect(() => {
 
