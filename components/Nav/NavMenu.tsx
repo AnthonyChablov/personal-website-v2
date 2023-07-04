@@ -9,7 +9,7 @@ import Icons from "../Common/Icons";
 const navigationLinks= [
   {text: '01. About Me', linkTo: '#about'}, 
   {text:'02. My Projects', linkTo: '#projects'}, 
-  {text: '03. Education', linkTo : '#education'}, 
+  {text: '03. Skills & Education', linkTo : '#education'}, 
   {text : '04. Contact', linkTo: '#contact'}
 ]
 
@@ -79,7 +79,6 @@ const NavMenu = () => {
           }
           </IconButton>
         </div>
-        
         {
           navigationLinks.map((link, i)=>{
             return (
