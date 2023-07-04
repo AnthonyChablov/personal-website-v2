@@ -37,7 +37,7 @@ const Sidebar = ({anchor, mode}:ISideBar) => {
                             {
                                 linkData.map((linkName, i)=>{
                                     return (
-                                        <Link href={linkName.link} key={i}>
+                                        <Link href={linkName.link} key={i}  target="_blank">
                                             <IconButton  className="mt-4 ">
                                                 <Icons type={linkName.icon} size={iconSize}/>
                                             </IconButton>
@@ -52,7 +52,7 @@ const Sidebar = ({anchor, mode}:ISideBar) => {
                                 className="text-sm lowercase text-zinc-700 dark:text-slate-300 "
                                 variant='text'
                             >
-                                <a href="mailto: aechablov@gmail.com  ">
+                                <a href="mailto: aechablov@gmail.com">
                                     aechablov@gmail.com
                                 </a>
                             </Button>
