@@ -20,7 +20,7 @@ const Projects = () => {
     {
       project:'Featured Project',
       header: 'Street-Art-To',
-      paragraph: 'A .',
+      paragraph: 'An application that displays locations of street-art and murals across Toronto, Canada. Users can search for street-art and filter by various parameters.',
       madeWith : 'React.js, TypeScript, Firebase, Tailwind CSS, Material UI, Leaflet, Framer-Motion, Zustand',
       github: 'https://github.com/AnthonyChablov/street-art-to',
       link: 'https://street-art-to-ada52.web.app/',
