@@ -2,6 +2,8 @@ import Header from '../../Common/Header';
 import ProjectCard from './ProjectCard';
 import soundScopeImg from '../../../assets/images/projects/sound-scope/soundScope.png';
 import personalWebsite from '../../../assets/images/projects/personal-website/personalWebsite.png';
+import todoList from '../../../assets/images/projects/todo-list/todolistImage.png'
+import streetArtTo from '../../../assets/images/projects/street-art/street-art-to.png'
 
 const Projects = () => {
 
@@ -17,12 +19,12 @@ const Projects = () => {
     },
     {
       project:'Featured Project',
-      header: 'Project 2',
-      paragraph: 'A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.',
-      madeWith : 'VS Code, Sublime Text Atom, iTerm2, Hyper',
-      github: 'https://en.wikipedia.org/wiki/Next.js',
-      link: 'https://en.wikipedia.org/wiki/Next.js',
-      img: soundScopeImg
+      header: 'Street-Art-To',
+      paragraph: 'A .',
+      madeWith : 'React.js, TypeScript, Firebase, Tailwind CSS, Material UI, Leaflet, Framer-Motion, Zustand',
+      github: 'https://github.com/AnthonyChablov/street-art-to',
+      link: 'https://street-art-to-ada52.web.app/',
+      img: streetArtTo
     },
     {
       project:'Featured Project',
@@ -35,12 +37,12 @@ const Projects = () => {
     },
     {
       project:'Featured Project',
-      header: 'Project 4',
-      paragraph: 'A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.',
-      madeWith : 'VS Code, Sublime Text Atom, iTerm2, Hyper',
-      github: 'https://en.wikipedia.org/wiki/Next.js',
-      link: 'https://en.wikipedia.org/wiki/Next.js',
-      img: soundScopeImg
+      header: 'Task List Tracker',
+      paragraph: 'A MERN Full-Stack Task-List Tracker App with User-Authentication. Allows users to Create, Read, Update and Delete tasks. Fully responsive and mobile-friendly layout with darkmode.',
+      madeWith : 'MongoDB, React.js, Express.js, Node.js, TypeScript, Tailwind CSS, Material UI, Framer-Motion',
+      github: 'https://github.com/AnthonyChablov/to-do-list-mern-app',
+      link: 'https://to-do-list-mern-app.vercel.app/',
+      img: todoList
     }
   ];
 

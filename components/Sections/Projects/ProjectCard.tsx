@@ -92,7 +92,7 @@ const ProjectCard = ({subheader, id, header, paragraph, madewith, github, link, 
                 `flex items-center mt-9 shadow-md`}
               >
                 <div className="rounded-md overflow-hidden hue-rotate-0 sm:h-fit 
-                bg-gray-900 opacity-75 blur-xs"
+                bg-gray-900 opacity-90 blur-xs"
                 >
                   {
                     windowWidth > 768 &&
