@@ -28,7 +28,7 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
         >
-            <div className="rounded-full overflow-hidden w-fit flex mt-6">
+            <div className="rounded-full overflow-hidden w-fit flex mt-6 shadow-xl">
                 <Image 
                     src={profileImg} 
                     height={100}
@@ -58,9 +58,20 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
         >
-          Frontend Web Developer
+          Front End Web Developer 
         </m.h1>
-        <m.p className="mt-12 font-light text-slate-700 text-md dark:text-slate-300"
+        <m.h2 className="mt-4 text-lg text-slate-700 font-regular dark:text-slate-200"
+          variants={
+            width >= 1280 
+              ? heroHeaderVariants 
+              : heroHeaderMobileVariants
+          }
+          initial="hidden"
+          animate="visible"
+        >
+          Full-Stack Capable
+        </m.h2>
+        <m.p className="mt-12 font-regular text-slate-700 text-md dark:text-slate-300"
           variants={
             width >= 1280 
               ? heroHeaderVariants 

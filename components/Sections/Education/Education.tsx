@@ -18,9 +18,6 @@ const skills = [
 ];
 
 const Education = () => {
-
- 
-
   return (
     <section className="text-center tracking-wide mb-10 pt-16" id='education'>
       <div className="flex items-center justify-center">
@@ -36,7 +33,7 @@ const Education = () => {
       </p>
       
       {/* Skills */}
-      <div className='text-left mx-auto grid grid-cols-2 grid-rows-3 gap-11
+      <div className='text-left mx-auto grid grid-cols-1 xs:grid-cols-2 grid-rows-3 gap-11
         sm:grid-cols-3 md:grid-cols-4 mt-16'
       >
         

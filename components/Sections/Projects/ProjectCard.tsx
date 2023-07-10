@@ -57,7 +57,7 @@ const ProjectCard = ({subheader, id, header, paragraph, madewith, github, link, 
               ${id % 2 === 0 
                   ? 'text-left mr-10' 
                   : 'text-right ml-10'
-              } 
+              }
             `}
           >
             {/* Content */}

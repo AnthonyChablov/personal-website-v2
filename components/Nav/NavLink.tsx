@@ -1,7 +1,5 @@
-import React from 'react'
 import Link from 'next/link';
-import { useStateStore } from '../../store/useStore'
-
+import { useStateStore } from '../../store/useStore';
 
 interface INavLink {
     text: string,
