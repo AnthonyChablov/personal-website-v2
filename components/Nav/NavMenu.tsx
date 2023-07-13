@@ -3,14 +3,14 @@ import Link from "next/link";
 import IconButton from "@mui/material/IconButton";
 import Button from "@mui/material/Button";
 import { useStateStore } from "../../store/useStore";
-import { m,  } from "framer-motion";
+import { m} from "framer-motion";
 import Icons from "../Common/Icons";
 
 const navigationLinks= [
-  {text: '01. About Me', linkTo: '#about'}, 
-  {text:'02. My Projects', linkTo: '#projects'}, 
-  {text: '03. Skills & Education', linkTo : '#education'}, 
-  {text : '04. Contact', linkTo: '#contact'}
+  {text: '01. About Me', linkTo: '/#about'}, 
+  {text:'02. My Projects', linkTo: '/#projects'}, 
+  {text: '03. Skills & Education', linkTo : '/#education'}, 
+  {text : '04. Contact', linkTo: '/#contact'}
 ]
 
 /* Framer Motion animations */
@@ -109,7 +109,7 @@ const NavMenu = () => {
           initial={'hidden'}
           animate={'visible'}
         >
-          <Link href="/">
+          <Link href="/resume">
             <Button 
               className="text-xl px-8 py-3 bg-white text-slate-700 font-medium 
                 capitalize  hover:bg-slate-700 hover:text-slate-100 
