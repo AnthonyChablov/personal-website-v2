@@ -26,6 +26,11 @@ const Footer = () => {
                     <Icons type="linkedin" size={32}/>
                 </IconButton>
             </Link>
+            <Link href={'https://leetcode.com/AnthonyChablov/'} target="_blank">
+                <IconButton >
+                    <Icons type="leetcode" size={26}/>
+                </IconButton>
+            </Link>
         </div>
         
     </>

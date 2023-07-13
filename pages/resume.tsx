@@ -6,7 +6,7 @@ import { LazyMotion, domAnimation } from 'framer-motion';
 import useWindowWidth from "../hooks/useWindowWidth";
 import Sidebar from '../components/Sidebar/Sidebar';
 import PDFEmbed from '../components/PDFEmbed/PDFEmbed';
-
+import Footer from '../components/Footer/Footer';
 import myResume from '../public/resume/resume.pdf';
 
 const resume = () => {
@@ -40,6 +40,7 @@ const resume = () => {
                     <NavBar/>
                     <div className="h-fit px-10 py-8 mx-auto max-w-5xl ">
                         <PDFEmbed pdfUrl={myResume} />
+                        <Footer/>
                     </div>
                 </div>
             {
