@@ -13,8 +13,10 @@ module.exports = {
   darkMode: 'class',
   theme: {
     screens: {
+      'xxs': '340px',
+      // => @media (min-width: 275px) { ... }
       'xs': '400px',
-      // => @media (min-width: 640px) { ... }
+      // => @media (min-width: 400px) { ... }
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
 

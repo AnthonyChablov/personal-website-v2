@@ -20,7 +20,6 @@ const AboutMe = () => {
             <div className="flex items-center" >
                 <Header title={'01. About Me'}/>
             </div>
-            
             <m.div className='text-left text-md font-normal text-slate-600 dark:text-slate-300'
               variants={sectionContentVariants}
               initial="hidden"
