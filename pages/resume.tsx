@@ -7,7 +7,7 @@ import useWindowWidth from "../hooks/useWindowWidth";
 import Sidebar from '../components/Sidebar/Sidebar';
 import PDFEmbed from '../components/PDFEmbed/PDFEmbed';
 import Footer from '../components/Footer/Footer';
-import myResume from '../public/resume/resume.pdf';
+import myResume from '../public/resume/Anthony_Chablov_Resume.pdf';
 import useScrollToTop from '../hooks/useScrollToTop';
 import Header from '../components/Common/Header';
 
