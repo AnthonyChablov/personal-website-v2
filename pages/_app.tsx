@@ -3,7 +3,7 @@ import type { AppProps } from 'next/dist/shared/lib/router/router';
 import '../styles/globals.css';
 const inter = Inter({subsets: ['latin']});
 import Head from 'next/head';
-
+import { Analytics } from '@vercel/analytics/react';
 export default function App({ Component, pageProps }) {
     return (
         <div className={inter.className}>
@@ -17,6 +17,7 @@ export default function App({ Component, pageProps }) {
                 <link rel="manifest" href="/site.webmanifest"/>
             </Head>
             <Component {...pageProps} />
+            <Analytics />
         </div>
     );
 }
