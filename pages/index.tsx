@@ -52,8 +52,8 @@ export default function Home() {
           </div>
           {windowWidth >= 1280 && (
             <>
-              <Sidebar anchor={"left"} mode={"icons"} />
-              <Sidebar anchor={"right"} mode={"email"} />
+              <SideBar anchor={"left"} mode={"icons"} />
+              <SideBar anchor={"right"} mode={"email"} />
             </>
           )}
         </div>
