@@ -9,58 +9,53 @@ import Education from "../components/Sections/Education/Education";
 import Projects from "../components/Sections/Projects/Projects";
 import useWindowWidth from "../hooks/useWindowWidth";
 import { useStateStore } from "../store/useStore";
-import {LazyMotion, domAnimation} from 'framer-motion';
+import { LazyMotion, domAnimation } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
-import Sidebar from "../components/Sidebar/Sidebar";
+import Sidebar from "../components/SideBar/SideBar";
 
 export default function Home() {
-
   /* State */
-  const theme = useStateStore(state => state.theme);
-  const setTheme = useStateStore(state => state.setTheme);
+  const theme = useStateStore((state) => state.theme);
+  const setTheme = useStateStore((state) => state.setTheme);
   /* Hooks */
   const windowWidth = useWindowWidth();
 
   useEffect(() => {
-
     const themeMode = localStorage.getItem("theme-mode-ac");
 
-    if (theme === 'dark' || themeMode === 'dark' ) {
-      document.documentElement.classList.add('dark');
-      setTheme('dark');
-    }else{
-      document.documentElement.classList.remove('dark');
-      setTheme('light');
+    if (theme === "dark" || themeMode === "dark") {
+      document.documentElement.classList.add("dark");
+      setTheme("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      setTheme("light");
     }
-
   }, [theme]);
 
   return (
     <>
       <LazyMotion features={domAnimation}>
         <div className="dark:bg-black">
-            <Head>
-              <title key={'title'}>Anthony Chablov</title>
-            </Head>
-            <div className="bg-zinc-100 dark:bg-slate-800 ">
-              <NavBar/>
-              <div className="h-fit px-10 py-8 mx-auto max-w-5xl ">
-                <Hero/>
-                <AboutMe/>
-                <Projects/>
-                <Education/>
-                <Contact/>
-                <Footer/>
-              </div>
+          <Head>
+            <title key={"title"}>Anthony Chablov</title>
+          </Head>
+          <div className="bg-zinc-100 dark:bg-slate-800 ">
+            <NavBar />
+            <div className="h-fit px-10 py-8 mx-auto max-w-5xl ">
+              <Hero />
+              <AboutMe />
+              <Projects />
+              <Education />
+              <Contact />
+              <Footer />
             </div>
-          {
-            windowWidth >= 1280 && (
-              <>
-                <Sidebar anchor={'left'} mode={'icons'}/>
-                <Sidebar anchor={'right'} mode={'email'}/>
-              </>
-            )
-          }
+          </div>
+          {windowWidth >= 1280 && (
+            <>
+              <Sidebar anchor={"left"} mode={"icons"} />
+              <Sidebar anchor={"right"} mode={"email"} />
+            </>
+          )}
         </div>
       </LazyMotion>
     </>
