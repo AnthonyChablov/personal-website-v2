@@ -4,7 +4,7 @@ import NavBar from "../components/Nav/NavBar";
 import { useStateStore } from "../store/useStore";
 import { LazyMotion, domAnimation } from "framer-motion";
 import useWindowWidth from "../hooks/useWindowWidth";
-import Sidebar from "../components/SideBar/SideBar";
+import Sidebar from "../components/SideBar/Sidebar";
 import PDFEmbed from "../components/PDFEmbed/PDFEmbed";
 import Footer from "../components/Footer/Footer";
 import myResume from "../public/resume/Anthony_Chablov_Resume.pdf";

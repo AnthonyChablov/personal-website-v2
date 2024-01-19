@@ -50,7 +50,7 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
       >
-        Full Stack Web Developer
+        Full-Stack Web Developer
       </m.h1>
       <m.h2
         className="mt-4 text-lg text-slate-700 font-regular dark:text-slate-200"
@@ -61,7 +61,7 @@ const Hero = () => {
         Building Seamless Digital Experiences
       </m.h2>
       <m.p
-        className="mt-12 font-regular text-slate-700 text-md dark:text-slate-300"
+        className="mt-7 font-regular text-slate-700 text-md dark:text-slate-300 w-full  mx-auto"
         variants={width >= 1280 ? heroHeaderVariants : heroHeaderMobileVariants}
         initial="hidden"
         animate="visible"
@@ -77,7 +77,7 @@ const Hero = () => {
       >
         <Link href="mailto: aechablov@gmail.com">
           <Button
-            className="mt-12 px-7 py-4 bg-slate-700 text-slate-100 hover:bg-white
+            className="mt-9 px-7 py-4 bg-slate-700 text-slate-100 hover:bg-white
                 capitalize  dark:hover:bg-slate-400 hover:text-slate-700 text-[1rem] font-thin
                 rounded-md shadow-md"
             variant="contained"
